@@ -35,12 +35,12 @@ void Camera::Inputs(keyPress *keyScan) {
 
     if (keyScan->mods == 1 || keyScan->mods == 3)
     {
-        speed = 0.4f;
+        speed = 0.1f;
         change = true;
     }
     else
     {
-        speed = 0.1f;
+        speed = 0.025f;
         change = true;
     }
 

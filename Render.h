@@ -21,6 +21,7 @@
 #include <stdio.h>
 #include "Storage.h"
 #include <vector>
+#include "Scene.h"
 
 class Render
 {
@@ -39,6 +40,9 @@ private:
     static void button_callback(GLFWwindow* window, int button, int action, int mode);
 
     void GLMtest();
+    void InitScene1(Scene *sc);
+    void InitScene2(Scene *sc);
+
     static Render* instance;
 
     Render();

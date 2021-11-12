@@ -442,6 +442,7 @@ CMakeFiles/zpg-game.dir/Render.cpp.o: \
  ../bushes.h \
  ../cube.h \
  ../gift.h \
+ ../sphere.h \
  ../suzi_smooth.h \
  ../tree.h \
  /usr/local/Cellar/glew/2.2.0_1/include/GL/glew.h \
@@ -1488,6 +1489,7 @@ CMakeFiles/zpg-game.dir/main.cpp.o: \
  ../Model.h \
  ../Object.h \
  ../Render.h \
+ ../Scene.h \
  ../Shader.h \
  ../Storage.h \
  ../Transform.h \

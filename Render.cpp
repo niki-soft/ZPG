@@ -4,13 +4,13 @@
 
 #include "Render.h"
 #include <vector>
-#include "Scene.h"
 #include "cube.h"
 #include "tree.h"
 #include "suzi_smooth.h"
 #include "gift.h"
 #include "bushes.h"
 #include "Camera.h"
+#include "sphere.h"
 
 bool rightMouse = false;
 int zn = 1;
@@ -93,6 +93,114 @@ void Render::GLMtest()
     //glm::mat4 Model = glm::mat4(1.0f);
 }
 
+void Render::InitScene1(Scene *sc){
+    sc->addObject(new Object(c));
+    sc->addObject(new Object(c));
+    sc->addObject(new Object(c));
+    sc->addObject(new Object(c));
+    sc->addObject(new Object(tree));
+    sc->addObject(new Object(suziSmooth));
+    sc->addObject(new Object(tree));
+    sc->addObject(new Object(plain));
+    sc->addObject(new Object(sphere));
+
+    //Object *kostka = new Object(c);
+
+    //scene1->getObject(0)->shader->setShader(scene1->getObject(0)->transform->M);
+    //scene1->getObject(0)->addTransform({"rotate", 0.02f, glm::vec3(1.0f, 0.0f, 1.0f)});
+    //scene1->getObject(0)->transform->addTransform({"scale", 0.985, glm::vec3(0.985) });
+    sc->getObject(0)->addTransform({"translate", 1,glm::vec3(3, 0, 0)});
+    sc->getObject(0)->calculateTransform();
+    sc->getObject(0)->removeTransform({"translate", 1,glm::vec3(3, 0, 0)});
+
+    //scene1->getObject(1)->shader->setShader(scene1->getObject(1)->transform->M);
+    //scene1->getObject(1)->transform->addTransform({"scale", 0.4, glm::vec3(0.4) });
+    sc->getObject(1)->addTransform({"translate", 1,glm::vec3(-3, 0, 0)});
+    sc->getObject(1)->calculateTransform();
+    //scene1->getObject(1)->transform->removeTransform({"scale", 0.4, glm::vec3(0.4) });
+    sc->getObject(1)->removeTransform( {"translate", 1,glm::vec3(-3, 0, 0)} );
+
+    //scene1->getObject(1)->addTransform( {"translate", 1,glm::vec3(-0.5, 0.0, 0.0)} );
+    //scene1->getObject(1)->addTransform({"rotate", 0.02f, glm::vec3(1.0f, 0.0f, 1.0f)});
+    //scene1->getObject(1)->addTransform( {"translate", 1,glm::vec3(0.5, -0.0, -0.0)} );
+    //scene1->getObject(2)->shader->setShader(scene1->getObject(1)->transform->M);
+
+    sc->getObject(2)->addTransform({"translate", 1,glm::vec3(0.0, -3.0, -0.0)});
+    sc->getObject(2)->calculateTransform();
+    sc->getObject(2)->removeTransform({"translate", 1,glm::vec3(0.0, -3.0, -0.0)});
+    //scene1->getObject(2)->addTransform( {"translate", 1,glm::vec3(0.0, -0.5, 0.0)} );
+    //scene1->getObject(2)->addTransform({"rotate", 0.02f, glm::vec3(1.0f, 0.0f, 1.0f)});
+    //scene1->getObject(2)->addTransform( {"translate", 1,glm::vec3(0.0, 0.5, -0.0)} );
+
+    //scene1->getObject(0)->model->setVAO();
+    //scene1->getObject(1)->model->setVAO();
+    //scene1->getObject(2)->model->setVAO();
+
+    sc->getObject(3)->addTransform({"translate", 1,glm::vec3(0.0, 3.0, -0.0)});
+    sc->getObject(3)->calculateTransform();
+    sc->getObject(3)->removeTransform({"translate", 1,glm::vec3(0.0, 3.0, -0.0)});
+
+    //scene1->getObject(4)->addTransform({"rotate", 3.14f, glm::vec3(0.0f, 0.0f, 1.0f)});
+    sc->getObject(4)->addTransform({"translate", 1,glm::vec3(-6.0, -3.0, -0.0)});
+    sc->getObject(4)->calculateTransform();
+    //scene1->getObject(4)->removeTransform({"rotate", 3.14f, glm::vec3(0.0f, 0.0f, 1.0f)});
+    sc->getObject(4)->removeTransform({"translate", 1,glm::vec3(-6.0, -3.0, -0.0)});
+    sc->getObject(4)->addTransform({"rotate", 0.004f, glm::vec3(0.0f, 1.0f, 0.0f)});
+
+
+    //scene1->getObject(5)->addTransform({"rotate", 3.14f, glm::vec3(0.0f, 0.0f, 1.0f)});
+    sc->getObject(5)->addTransform({"translate", 1,glm::vec3(2.0, 2.0, -0.0)});
+    sc->getObject(5)->calculateTransform();
+    sc->getObject(5)->removeTransform({"translate", 1,glm::vec3(2.0, 2.0, -0.0)});
+    sc->getObject(5)->addTransform({"rotate", 0.004f, glm::vec3(0.0f, 1.0f, 0.0f)});
+
+    //scene1->getObject(5)->addTransform({"rotate", 0.1f, glm::vec3(0.0f, 1.0f, 0.0f)});
+
+    //scene1->getObject(6)->addTransform({"rotate", 3.14f, glm::vec3(0.0f, 0.0f, 1.0f)});
+    sc->getObject(6)->addTransform({"translate", 1,glm::vec3(10.0, -3.0, -50.0)});
+    sc->getObject(6)->calculateTransform();
+    //scene1->getObject(6)->removeTransform({"rotate", 3.14f, glm::vec3(0.0f, 0.0f, 1.0f)});
+    sc->getObject(6)->removeTransform({"translate", 1,glm::vec3(10.0, -3.0, -50.0)});
+    sc->getObject(6)->addTransform({"rotate", -0.004f, glm::vec3(0.0f, 1.0f, 0.0f)});
+
+    //scene1->getObject(7)->addTransform({"rotate", 3.14f, glm::vec3(0.0f, 0.0f, 1.0f)});
+    sc->getObject(7)->addTransform({"translate", 1,glm::vec3(0.0, 0.0, 0.0)});
+    sc->getObject(7)->calculateTransform();
+    //scene1->getObject(7)->removeTransform({"rotate", 3.14f, glm::vec3(0.0f, 0.0f, 1.0f)});
+    sc->getObject(7)->removeTransform({"translate", 1,glm::vec3(0.0, 0.0, 0.0)});
+    sc->getObject(7)->addTransform({"rotate", -0.004f, glm::vec3(0.0f, 1.0f, 0.0f)});
+
+    //koule
+    sc->getObject(8)->addTransform({"translate", 1,glm::vec3(0.0, 0.0, -10.0)});
+    sc->getObject(8)->calculateTransform();
+    sc->getObject(8)->removeTransform({"translate", 1,glm::vec3(0.0, 0.0, -10.0)});
+    //scene1->getObject(8)->addTransform({"rotate", -0.02f, glm::vec3(0.0f, 1.0f, 0.0f)});
+}
+
+void Render::InitScene2(Scene *sc){
+    sc->addObject(new Object(sphere));
+    sc->addObject(new Object(sphere));
+    sc->addObject(new Object(sphere));
+    sc->addObject(new Object(sphere));
+
+    sc->getObject(0)->addTransform({"translate", 1,glm::vec3(-3, 0, 0)});
+    sc->getObject(0)->calculateTransform();
+    sc->getObject(0)->removeTransform({"translate", 1,glm::vec3(-3, 0, 0)});
+
+    sc->getObject(1)->addTransform({"translate", 1,glm::vec3(3, 0, 0)});
+    sc->getObject(1)->calculateTransform();
+    sc->getObject(1)->removeTransform({"translate", 1,glm::vec3(3, 0, 0)});
+
+    sc->getObject(2)->addTransform({"translate", 1,glm::vec3(0, 3, 0)});
+    sc->getObject(2)->calculateTransform();
+    sc->getObject(2)->removeTransform({"translate", 1,glm::vec3(0, 3, 0)});
+
+    sc->getObject(3)->addTransform({"translate", 1,glm::vec3(0, -3, 0)});
+    sc->getObject(3)->calculateTransform();
+    sc->getObject(3)->removeTransform({"translate", 1,glm::vec3(0, -3, 0)});
+
+}
+
 Render::Render() {
 };
 
@@ -149,90 +257,18 @@ void Render::RenderView() {
 
 
     Scene *scene1 = new Scene();
+    Scene *scene2 = new Scene();
 
-    scene1->addObject(new Object(c));
-    scene1->addObject(new Object(c));
-    scene1->addObject(new Object(c));
-    scene1->addObject(new Object(c));
-    scene1->addObject(new Object(tree));
-    scene1->addObject(new Object(suziSmooth));
-    scene1->addObject(new Object(tree));
-    scene1->addObject(new Object(plain));
+    InitScene1(scene1);
+    InitScene2(scene2);
 
-
-    //Object *kostka = new Object(c);
-
-    //scene1->getObject(0)->shader->setShader(scene1->getObject(0)->transform->M);
-    //scene1->getObject(0)->addTransform({"rotate", 0.02f, glm::vec3(1.0f, 0.0f, 1.0f)});
-    //scene1->getObject(0)->transform->addTransform({"scale", 0.985, glm::vec3(0.985) });
-    scene1->getObject(0)->addTransform({"translate", 1,glm::vec3(3, 0, 0)});
-    scene1->getObject(0)->calculateTransform();
-    scene1->getObject(0)->removeTransform({"translate", 1,glm::vec3(3, 0, 0)});
-
-    //scene1->getObject(1)->shader->setShader(scene1->getObject(1)->transform->M);
-    //scene1->getObject(1)->transform->addTransform({"scale", 0.4, glm::vec3(0.4) });
-    scene1->getObject(1)->addTransform({"translate", 1,glm::vec3(-3, 0, 0)});
-    scene1->getObject(1)->calculateTransform();
-    //scene1->getObject(1)->transform->removeTransform({"scale", 0.4, glm::vec3(0.4) });
-    scene1->getObject(1)->removeTransform( {"translate", 1,glm::vec3(-3, 0, 0)} );
-
-    //scene1->getObject(1)->addTransform( {"translate", 1,glm::vec3(-0.5, 0.0, 0.0)} );
-    //scene1->getObject(1)->addTransform({"rotate", 0.02f, glm::vec3(1.0f, 0.0f, 1.0f)});
-    //scene1->getObject(1)->addTransform( {"translate", 1,glm::vec3(0.5, -0.0, -0.0)} );
-    //scene1->getObject(2)->shader->setShader(scene1->getObject(1)->transform->M);
-
-    scene1->getObject(2)->addTransform({"translate", 1,glm::vec3(0.0, -3.0, -0.0)});
-    scene1->getObject(2)->calculateTransform();
-    scene1->getObject(2)->removeTransform({"translate", 1,glm::vec3(0.0, -3.0, -0.0)});
-
-    //scene1->getObject(2)->addTransform( {"translate", 1,glm::vec3(0.0, -0.5, 0.0)} );
-    //scene1->getObject(2)->addTransform({"rotate", 0.02f, glm::vec3(1.0f, 0.0f, 1.0f)});
-    //scene1->getObject(2)->addTransform( {"translate", 1,glm::vec3(0.0, 0.5, -0.0)} );
-
-    //scene1->getObject(0)->model->setVAO();
-    //scene1->getObject(1)->model->setVAO();
-    //scene1->getObject(2)->model->setVAO();
-
-    scene1->getObject(3)->addTransform({"translate", 1,glm::vec3(0.0, 3.0, -0.0)});
-    scene1->getObject(3)->calculateTransform();
-    scene1->getObject(3)->removeTransform({"translate", 1,glm::vec3(0.0, 3.0, -0.0)});
-
-    //scene1->getObject(4)->addTransform({"rotate", 3.14f, glm::vec3(0.0f, 0.0f, 1.0f)});
-    scene1->getObject(4)->addTransform({"translate", 1,glm::vec3(-6.0, -3.0, -0.0)});
-    scene1->getObject(4)->calculateTransform();
-    //scene1->getObject(4)->removeTransform({"rotate", 3.14f, glm::vec3(0.0f, 0.0f, 1.0f)});
-    scene1->getObject(4)->removeTransform({"translate", 1,glm::vec3(-6.0, -3.0, -0.0)});
-    scene1->getObject(4)->addTransform({"rotate", 0.02f, glm::vec3(0.0f, 1.0f, 0.0f)});
-
-
-    //scene1->getObject(5)->addTransform({"rotate", 3.14f, glm::vec3(0.0f, 0.0f, 1.0f)});
-    scene1->getObject(5)->addTransform({"translate", 1,glm::vec3(2.0, 2.0, -0.0)});
-    scene1->getObject(5)->calculateTransform();
-    scene1->getObject(5)->removeTransform({"translate", 1,glm::vec3(2.0, 2.0, -0.0)});
-    //scene1->getObject(5)->removeTransform({"rotate", 3.14f, glm::vec3(0.0f, 0.0f, 1.0f)});
-
-    scene1->getObject(5)->addTransform({"rotate", 0.1f, glm::vec3(0.0f, 1.0f, 0.0f)});
-
-    //scene1->getObject(6)->addTransform({"rotate", 3.14f, glm::vec3(0.0f, 0.0f, 1.0f)});
-    scene1->getObject(6)->addTransform({"translate", 1,glm::vec3(10.0, -3.0, -50.0)});
-    scene1->getObject(6)->calculateTransform();
-    //scene1->getObject(6)->removeTransform({"rotate", 3.14f, glm::vec3(0.0f, 0.0f, 1.0f)});
-    scene1->getObject(6)->removeTransform({"translate", 1,glm::vec3(10.0, -3.0, -50.0)});
-    scene1->getObject(6)->addTransform({"rotate", -0.02f, glm::vec3(0.0f, 1.0f, 0.0f)});
-
-    //scene1->getObject(7)->addTransform({"rotate", 3.14f, glm::vec3(0.0f, 0.0f, 1.0f)});
-    scene1->getObject(7)->addTransform({"translate", 1,glm::vec3(0.0, 0.0, 0.0)});
-    scene1->getObject(7)->calculateTransform();
-    //scene1->getObject(7)->removeTransform({"rotate", 3.14f, glm::vec3(0.0f, 0.0f, 1.0f)});
-    scene1->getObject(7)->removeTransform({"translate", 1,glm::vec3(0.0, 0.0, 0.0)});
-    //scene1->getObject(6)->addTransform({"rotate", -0.02f, glm::vec3(0.0f, 1.0f, 0.0f)});
     int pocitadlo = 0;
     float meritko;
 
     glEnable(GL_DEPTH_TEST);
 
     while (!glfwWindowShouldClose(window)){
-
+        glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
 
         pocitadlo = pocitadlo + 1;
 /*
@@ -256,8 +292,8 @@ void Render::RenderView() {
         // clear color and depth buffer
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        for (int i = 0; i < scene1->getNumberOfObjects(); i++) {
-            scene1->getObject(i)->Draw(keyScan);
+        for (int i = 0; i < scene2->getNumberOfObjects(); i++) {
+            scene2->getObject(i)->Draw(keyScan);
 
         }
         // update other events like input handling

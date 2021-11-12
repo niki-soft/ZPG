@@ -8,7 +8,7 @@
 Object::Object(std::vector<float> pnts) {
 
     this->model = new Model(pnts);
-    this->shader = new Shader(new Camera(this->shader, 1366, 768, glm::vec3(0.0f, 0.0f, 10.0f)));
+    this->shader = new Shader(new Camera(this->shader, 1366, 768, glm::vec3(0.0f, 0.0f, 5.0f)));
     this->transform = new Transform();
 
 }

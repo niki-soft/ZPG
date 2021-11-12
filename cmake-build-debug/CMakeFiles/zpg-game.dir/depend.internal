@@ -442,6 +442,7 @@ CMakeFiles/zpg-game.dir/Render.cpp.o
  /Users/jenda/CLionProjects/zpg-game/bushes.h
  /Users/jenda/CLionProjects/zpg-game/cube.h
  /Users/jenda/CLionProjects/zpg-game/gift.h
+ /Users/jenda/CLionProjects/zpg-game/sphere.h
  /Users/jenda/CLionProjects/zpg-game/suzi_smooth.h
  /Users/jenda/CLionProjects/zpg-game/tree.h
  /usr/local/Cellar/glew/2.2.0_1/include/GL/glew.h
@@ -1488,6 +1489,7 @@ CMakeFiles/zpg-game.dir/main.cpp.o
  /Users/jenda/CLionProjects/zpg-game/Model.h
  /Users/jenda/CLionProjects/zpg-game/Object.h
  /Users/jenda/CLionProjects/zpg-game/Render.h
+ /Users/jenda/CLionProjects/zpg-game/Scene.h
  /Users/jenda/CLionProjects/zpg-game/Shader.h
  /Users/jenda/CLionProjects/zpg-game/Storage.h
  /Users/jenda/CLionProjects/zpg-game/Transform.h

@@ -28,17 +28,22 @@ private:
     GLuint fragmentShader;
     GLuint shaderProgram;
     GLint ModelTransform;
-    GLint CameraMatrix;
+    GLint ProjectionMatrix;
+    GLint ViewMatrix;
+    GLint CamPosition;
+    glm::mat3 normalMatrix;
     //GLint Projection;
     //GLint View;
     /*glm::mat4 ModelMatrix;*/
+private:
+    void compileShader();
 
 public:
     Camera *camera;
     Shader(Camera* camera);
     void setShader(glm::mat4 M);
-    /*const char* getVertex();
-    const char* getFragment();*/
+
+
 };
 
 
