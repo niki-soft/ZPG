@@ -11,6 +11,12 @@
 #include "bushes.h"
 #include "Camera.h"
 #include "sphere.h"
+#include "plain.h"
+#include "building.h"
+#include "skydome.h"
+#include <iostream>
+
+
 
 bool rightMouse = false;
 int zn = 1;
@@ -201,6 +207,10 @@ void Render::InitScene2(Scene *sc){
 
 }
 
+void Render::InitScene3(Scene *sc){
+    sc->addObject(new Object(plain));
+}
+
 Render::Render() {
 };
 
@@ -219,12 +229,15 @@ void Render::RenderView() {
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 
     GLFWwindow* window = glfwCreateWindow(1366, 768, "ZPG", NULL, NULL);
+
+
     if (!window)
     {
         glfwTerminate();
         exit(EXIT_FAILURE);
     }
     glfwMakeContextCurrent(window);
+
     glfwSwapInterval(1);
     // start GLEW extension handler
     glewExperimental = GL_TRUE;
@@ -258,9 +271,11 @@ void Render::RenderView() {
 
     Scene *scene1 = new Scene();
     Scene *scene2 = new Scene();
+    //Scene *scene3 = new Scene();
 
-    InitScene1(scene1);
+    //InitScene1(scene1);
     InitScene2(scene2);
+    //InitScene3(scene3);
 
     int pocitadlo = 0;
     float meritko;
@@ -270,32 +285,13 @@ void Render::RenderView() {
     while (!glfwWindowShouldClose(window)){
         glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
 
-        pocitadlo = pocitadlo + 1;
-/*
-        if ((pocitadlo > 200))
-        {
-            if (zn > 0)
-            {
-                scene1->getObject(0)->transform->removeTransform({"scale", 0.985, glm::vec3(0.985)});
-                scene1->getObject(0)->transform->addTransform({"scale", 1.015, glm::vec3(1.015)});
-            }
-            else
-            {
-                scene1->getObject(0)->transform->removeTransform({"scale", 1.015, glm::vec3(1.015)});
-                scene1->getObject(0)->transform->addTransform({"scale", 0.985, glm::vec3(0.985)});
-            }
-            zn = zn * -1;
-            pocitadlo = 0;
-        }
-*/
-        meritko = 1.0f - zn * 0.015;
         // clear color and depth buffer
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         for (int i = 0; i < scene2->getNumberOfObjects(); i++) {
             scene2->getObject(i)->Draw(keyScan);
-
         }
+
         // update other events like input handling
         glfwPollEvents();
         // put the stuff we’ve been drawing onto the display

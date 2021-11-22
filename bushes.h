@@ -2,7 +2,7 @@
 // glDrawArrays(GL_TRIANGLES, 0, 8730);
 #include <vector>
 
-std::vector<float> plain = {
+std::vector<float> bushes = {
         -0.010, -0.001, 0.010, -0.760, 0.489, 0.429,
         0.016, 0.036, 0.020, -0.705, 0.615, -0.353,
         0.016, 0.036, 0.017, -0.785, 0.533, 0.316,

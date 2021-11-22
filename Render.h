@@ -16,6 +16,9 @@
 #include </usr/local/Cellar/glm/0.9.9.8/include/glm/gtc/matrix_transform.hpp> // glm::translate, glm::rotate, glm::scale, glm::perspective
 #include </usr/local/Cellar/glm/0.9.9.8/include/glm/gtc/type_ptr.hpp> // glm::value_ptr
 
+// Include SOIL
+#include "/usr/local/include/SOIL/SOIL.h"
+
 //Include the standard C++ headers
 #include <stdlib.h>
 #include <stdio.h>
@@ -40,8 +43,10 @@ private:
     static void button_callback(GLFWwindow* window, int button, int action, int mode);
 
     void GLMtest();
+
     void InitScene1(Scene *sc);
     void InitScene2(Scene *sc);
+    void InitScene3(Scene *sc);
 
     static Render* instance;
 

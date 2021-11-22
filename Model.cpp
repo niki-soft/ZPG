@@ -9,13 +9,7 @@ Model::Model(std::vector<float> pnts) {
 
     points = new float[pnts.size()];
     std::copy(pnts.begin(), pnts.end(), points);
-    /*
-    for (int i = 0; i < pnts.size(); i++)
-    {
-        points[i] = pnts[i];
-        std::cout << points[i] << std::endl;
-    }
-*/
+
     triangle_count = (int)pnts.size()/6;
 
     VBO = 0;
@@ -26,12 +20,16 @@ Model::Model(std::vector<float> pnts) {
     VAO = 0;
     glGenVertexArrays(1, &VAO); //generate the VAO
     glBindVertexArray(VAO); //bind the VAO
+
     glEnableVertexAttribArray(0); //enable vertex attributes
-    glEnableVertexAttribArray(1);
+    glEnableVertexAttribArray(1); //normal atribute
+    //glEnableVertexAttribArray(2); //texture atribute
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
 
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GL_FLOAT), NULL);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GL_FLOAT), (GLvoid*)0);
     glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(GL_FLOAT), (GLvoid*)(3 * sizeof(GL_FLOAT)));
+    //glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(GL_FLOAT), (GLvoid*)(6 * sizeof(GL_FLOAT)));
+
 }
 
 void Model::setVAO() {

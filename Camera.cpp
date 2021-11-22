@@ -10,7 +10,7 @@ Camera::Camera(Shader *shader, int width, int height, glm::vec3 position) {
 
     Camera::width = width;
     Camera::height = height;
-    Position = position;
+    Camera::Position = position;
     Camera::shaders.push_back(shader);
     Camera::Matrix(45.0f, 0.01f, 100.0f);
 
@@ -35,12 +35,12 @@ void Camera::Inputs(keyPress *keyScan) {
 
     if (keyScan->mods == 1 || keyScan->mods == 3)
     {
-        speed = 0.1f;
+        speed = 0.02f;
         change = true;
     }
     else
     {
-        speed = 0.025f;
+        speed = 0.005f;
         change = true;
     }
 

@@ -207,7 +207,8 @@ CMakeFiles/zpg-game.dir/Camera.cpp.o: \
  /usr/local/Cellar/glm/0.9.9.8/include/glm/vec2.hpp \
  /usr/local/Cellar/glm/0.9.9.8/include/glm/vec3.hpp \
  /usr/local/Cellar/glm/0.9.9.8/include/glm/vec4.hpp \
- /usr/local/Cellar/glm/0.9.9.8/include/glm/vector_relational.hpp
+ /usr/local/Cellar/glm/0.9.9.8/include/glm/vector_relational.hpp \
+ /usr/local/include/SOIL/SOIL.h
 CMakeFiles/zpg-game.dir/Model.cpp.o: \
  ../Model.cpp \
  ../Model.h \
@@ -422,7 +423,8 @@ CMakeFiles/zpg-game.dir/Object.cpp.o: \
  /usr/local/Cellar/glm/0.9.9.8/include/glm/vec2.hpp \
  /usr/local/Cellar/glm/0.9.9.8/include/glm/vec3.hpp \
  /usr/local/Cellar/glm/0.9.9.8/include/glm/vec4.hpp \
- /usr/local/Cellar/glm/0.9.9.8/include/glm/vector_relational.hpp
+ /usr/local/Cellar/glm/0.9.9.8/include/glm/vector_relational.hpp \
+ /usr/local/include/SOIL/SOIL.h
 CMakeFiles/zpg-game.dir/ObjectFactory.cpp.o: \
  ../Model.h \
  ../ObjectFactory.cpp \
@@ -439,9 +441,12 @@ CMakeFiles/zpg-game.dir/Render.cpp.o: \
  ../Shader.h \
  ../Storage.h \
  ../Transform.h \
+ ../building.h \
  ../bushes.h \
  ../cube.h \
  ../gift.h \
+ ../plain.h \
+ ../skydome.h \
  ../sphere.h \
  ../suzi_smooth.h \
  ../tree.h \
@@ -647,7 +652,8 @@ CMakeFiles/zpg-game.dir/Render.cpp.o: \
  /usr/local/Cellar/glm/0.9.9.8/include/glm/vec2.hpp \
  /usr/local/Cellar/glm/0.9.9.8/include/glm/vec3.hpp \
  /usr/local/Cellar/glm/0.9.9.8/include/glm/vec4.hpp \
- /usr/local/Cellar/glm/0.9.9.8/include/glm/vector_relational.hpp
+ /usr/local/Cellar/glm/0.9.9.8/include/glm/vector_relational.hpp \
+ /usr/local/include/SOIL/SOIL.h
 CMakeFiles/zpg-game.dir/Scene.cpp.o: \
  ../Camera.h \
  ../Model.h \
@@ -859,7 +865,8 @@ CMakeFiles/zpg-game.dir/Scene.cpp.o: \
  /usr/local/Cellar/glm/0.9.9.8/include/glm/vec2.hpp \
  /usr/local/Cellar/glm/0.9.9.8/include/glm/vec3.hpp \
  /usr/local/Cellar/glm/0.9.9.8/include/glm/vec4.hpp \
- /usr/local/Cellar/glm/0.9.9.8/include/glm/vector_relational.hpp
+ /usr/local/Cellar/glm/0.9.9.8/include/glm/vector_relational.hpp \
+ /usr/local/include/SOIL/SOIL.h
 CMakeFiles/zpg-game.dir/Shader.cpp.o: \
  ../Camera.h \
  ../Shader.cpp \
@@ -1066,7 +1073,8 @@ CMakeFiles/zpg-game.dir/Shader.cpp.o: \
  /usr/local/Cellar/glm/0.9.9.8/include/glm/vec2.hpp \
  /usr/local/Cellar/glm/0.9.9.8/include/glm/vec3.hpp \
  /usr/local/Cellar/glm/0.9.9.8/include/glm/vec4.hpp \
- /usr/local/Cellar/glm/0.9.9.8/include/glm/vector_relational.hpp
+ /usr/local/Cellar/glm/0.9.9.8/include/glm/vector_relational.hpp \
+ /usr/local/include/SOIL/SOIL.h
 CMakeFiles/zpg-game.dir/Storage.cpp.o: \
  ../Camera.h \
  ../Model.h \
@@ -1277,7 +1285,8 @@ CMakeFiles/zpg-game.dir/Storage.cpp.o: \
  /usr/local/Cellar/glm/0.9.9.8/include/glm/vec2.hpp \
  /usr/local/Cellar/glm/0.9.9.8/include/glm/vec3.hpp \
  /usr/local/Cellar/glm/0.9.9.8/include/glm/vec4.hpp \
- /usr/local/Cellar/glm/0.9.9.8/include/glm/vector_relational.hpp
+ /usr/local/Cellar/glm/0.9.9.8/include/glm/vector_relational.hpp \
+ /usr/local/include/SOIL/SOIL.h
 CMakeFiles/zpg-game.dir/Transform.cpp.o: \
  ../Transform.cpp \
  ../Transform.h \
@@ -1696,4 +1705,5 @@ CMakeFiles/zpg-game.dir/main.cpp.o: \
  /usr/local/Cellar/glm/0.9.9.8/include/glm/vec2.hpp \
  /usr/local/Cellar/glm/0.9.9.8/include/glm/vec3.hpp \
  /usr/local/Cellar/glm/0.9.9.8/include/glm/vec4.hpp \
- /usr/local/Cellar/glm/0.9.9.8/include/glm/vector_relational.hpp
+ /usr/local/Cellar/glm/0.9.9.8/include/glm/vector_relational.hpp \
+ /usr/local/include/SOIL/SOIL.h

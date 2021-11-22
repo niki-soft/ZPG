@@ -16,6 +16,9 @@
 #include </usr/local/Cellar/glm/0.9.9.8/include/glm/gtc/matrix_transform.hpp> // glm::translate, glm::rotate, glm::scale, glm::perspective
 #include </usr/local/Cellar/glm/0.9.9.8/include/glm/gtc/type_ptr.hpp> // glm::value_ptr
 
+// Include SOIL
+#include "/usr/local/include/SOIL/SOIL.h"
+
 class Camera;
 
 class Shader
@@ -30,11 +33,8 @@ private:
     GLint ModelTransform;
     GLint ProjectionMatrix;
     GLint ViewMatrix;
-    GLint CamPosition;
-    glm::mat3 normalMatrix;
-    //GLint Projection;
-    //GLint View;
-    /*glm::mat4 ModelMatrix;*/
+    GLint CamPos;
+
 private:
     void compileShader();
 

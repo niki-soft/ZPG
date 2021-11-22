@@ -225,6 +225,8 @@ zpg-game: CMakeFiles/zpg-game.dir/Camera.cpp.o
 zpg-game: CMakeFiles/zpg-game.dir/build.make
 zpg-game: /usr/local/Cellar/glew/2.2.0_1/lib/libGLEW.2.2.dylib
 zpg-game: /usr/local/Cellar/glfw/3.3.4/lib/libglfw.3.dylib
+zpg-game: /opt/local/lib/libSOIL.dylib
+zpg-game: /opt/local/lib/libSOIL.a
 zpg-game: CMakeFiles/zpg-game.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable zpg-game"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/zpg-game.dir/link.txt --verbose=$(VERBOSE)

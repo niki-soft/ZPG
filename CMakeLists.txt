@@ -12,11 +12,12 @@ include_directories(${GLEW_H} ${GLFW_H} ${GLM_HPP})
 # Add target link
 set(GLEW_LINK /usr/local/Cellar/glew/2.2.0_1/lib/libGLEW.2.2.dylib)
 set(GLFW_LINK /usr/local/Cellar/glfw/3.3.4/lib/libglfw.3.dylib)
-link_libraries(${OPENGL} ${GLEW_LINK} ${GLFW_LINK})
+set(SOIL_LIBRARY /opt/local/lib/libSOIL.dylib)
+link_libraries(${OPENGL} ${GLEW_LINK} ${GLFW_LINK} ${SOIL_LIBRARY})
 
 set(SOURCE_FILES main.cpp)
 add_executable(zpg-game main.cpp Render.cpp Render.h Object.cpp Object.h Shader.cpp Shader.h Model.cpp Model.h Transform.cpp Transform.h Scene.cpp Scene.h Storage.cpp Storage.h ObjectFactory.cpp ObjectFactory.h Camera.cpp Camera.h)
 
 find_package(OpenGL REQUIRED)
 include_directories(${OPENGL_INCLUDE_DIR})
-target_link_libraries(zpg-game ${OPENGL_LIBRARIES})
+target_link_libraries(zpg-game ${OPENGL_LIBRARIES} /opt/local/lib/libSOIL.a)

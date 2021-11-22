@@ -4,7 +4,7 @@
 
 #include "Shader.h"
 #include "Camera.h"
-
+#include <iostream>
 Shader::Shader(Camera *cam) {
 
     this->camera = cam;
@@ -16,42 +16,46 @@ Shader::Shader(Camera *cam) {
             "uniform mat4 ModelMatrix;"
             "uniform mat4 ProjectionMatrix;"
             "uniform mat4 ViewMatrix;"
-            "uniform vec3 CamPosition;"
             "out vec3 Normals;"
             "out vec3 FragPos;"
-            "out vec3 CamPos;"
             "void main () {"
             "     gl_Position = ProjectionMatrix * ViewMatrix * ModelMatrix * vec4 (vp, 1.0);"
             "     vec4 a = ModelMatrix * vec4(vp, 1.0f);"
             "     FragPos = a.xyz / a.w;"
-            "     Normals=transpose(inverse(mat3(ModelMatrix))) * normal;"
-            "     CamPos = CamPosition;"
+            "     Normals = transpose(inverse(mat3(ModelMatrix))) * normal;"
             "}";
 
     this->fragment_shader =
             "#version 400\n"
             "in vec3 Normals;"
             "in vec3 FragPos;"
-            "in vec3 CamPos;"
+            "uniform vec3 CamPosition;"
             "out vec4 FragColor;"
 
             "void main () {"
             "   vec3 lightPos = vec3(0.0f, 0.0f, 0.0f);"
-            "   vec3 lightVector = normalize(lightPos - FragPos);"
+            "   vec3 lightVector = lightPos - FragPos;"
             "   float dot_product = max(dot(normalize(lightVector), normalize(Normals)), 0.0);"
             "   vec4 diffuse = dot_product * vec4(0.385f, 0.647f, 0.812f, 1.0f);"
             "   vec4 ambient = vec4(0.1, 0.1, 0.1, 1.0);"
             "   float specularStrength = 0.75;"
-            "   vec3 viewDir = normalize(CamPos - FragPos);"
+            "   vec3 viewDir = normalize(CamPosition - FragPos);"
             "   vec3 reflectDir = reflect(-lightVector, Normals);"
-            "   float spec = pow(max(dot(viewDir, reflectDir), 0.0), 16);"
+            "   float spec = pow(max(dot(normalize(viewDir), normalize(reflectDir)), 0.0), 16);"
             "   vec3 specular = specularStrength * spec * vec3(1.0f, 1.0f, 1.0f);"
             "   FragColor = ambient+diffuse + vec4(specular, 1.0f);"
             "}";
 
             compileShader();
     /*
-    this->vertex_shader =
+            "//uniform sampler2D textureUnitID;"
+            "//in vec2 uv;"
+            "   //FragColor = texture(textureUnitID, uv);"
+
+            "   FragColor = vec4(uv, 1.0, 1.0);"
+            "   FragColor = texture(textureUnitID,uv);"
+
+     this->vertex_shader =
             "#version 330\n"
             "layout(location=0) in vec3 vp;"
             "layout(location=1) in vec3 normal;"
@@ -95,14 +99,39 @@ void Shader::compileShader() {
     ModelTransform = glGetUniformLocation(shaderProgram, "ModelMatrix");
     ProjectionMatrix = glGetUniformLocation(shaderProgram, "ProjectionMatrix");
     ViewMatrix = glGetUniformLocation(shaderProgram, "ViewMatrix");
-    CamPosition = glGetUniformLocation(shaderProgram, "CamPosition");
-    glUseProgram(shaderProgram);
+    CamPos = glGetUniformLocation(shaderProgram, "CamPosition");
+
 }
 void Shader::setShader(glm::mat4 M) {
 
+    // Bind first texture to first texture unit
+    //glActiveTexture specifies which texture unit to make active
+
+    //glActiveTexture(GL_TEXTURE0);
+
+    //Load texture and generate TextureID
+    //GLuint textureID = SOIL_load_OGL_texture("test.png",
+    //                                         SOIL_LOAD_RGBA,
+    //                                         SOIL_CREATE_NEW_ID,
+    //                                         SOIL_FLAG_INVERT_Y);
+/*
+    if (textureID == NULL) {
+        std::cout << "An error occurred while loading image." << std::endl;
+        exit(EXIT_FAILURE);
+    }
+*/
+ //   glBindTexture(GL_TEXTURE_2D, textureID);
+
+    // Set texture unit to fragment shader
+
+//    GLint uniformID = glGetUniformLocation(shaderProgram, "textureUnitID");
+
+
+    glUseProgram(shaderProgram);
     glUniformMatrix4fv(ModelTransform, 1, GL_FALSE, &M[0][0]);
     glUniformMatrix4fv(ProjectionMatrix, 1, GL_FALSE, glm::value_ptr(camera->projection));
     glUniformMatrix4fv(ViewMatrix, 1, GL_FALSE, glm::value_ptr(camera->view));
-    glUniform3f(CamPosition, 1, GL_FALSE, this->camera->Position[0]);
+    glUniform3fv(CamPos, 1, &this->camera->Position[0]);
 
+//    glUniform1i(uniformID, 0); //texture unit 0
 }
