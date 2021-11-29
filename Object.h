@@ -26,6 +26,7 @@ public:
     void removeTransform (transStruct t);
     void calculateTransform();
     float getZetPosition();
+    void changeShader(Shader* sh);
 };
 
 #endif //ZPG_TEST_OBJECT_H

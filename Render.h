@@ -54,7 +54,6 @@ private:
 
     void LoadTextures();
     Camera* generateCamera();
-    Shader* generateShader(int type, Camera* cam, const char* vertFile, const char* fragFile);
 
     Render();
 

@@ -26,11 +26,7 @@ class Camera;
 class Shader
 {
 private:
-    const char* vertex_shader;
-    const char* fragment_shader;
 
-    GLuint vertexShader;
-    GLuint fragmentShader;
     GLuint shaderProgram;
     GLint ModelTransform;
     GLint ProjectionMatrix;
@@ -41,9 +37,10 @@ private:
     void compileShader(const char* fragFile, const char* vertFile);
 
 public:
-    int type;
+    int* textureUnit = nullptr;
     Camera *camera;
-    Shader(int type, Camera* camera, const char* fragFile, const char* vertFile);
+    Shader(Camera* camera, const char* fragFile, const char* vertFile, int textureUnit);
+    Shader(Camera* camera, const char* fragFile, const char* vertFile);
     void setShader(glm::mat4 M);
 };
 

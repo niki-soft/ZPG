@@ -7,11 +7,12 @@
 
 Object::Object(std::vector<float> pnts, Shader* sh) {
 
-    if (sh->type == 1){
+    if (sh->textureUnit == nullptr)
+    {
         this->model = new Model(pnts);
     }
-
-    if (sh->type == 2 || sh->type == 3) {
+    else
+    {
         this->model = new TexturedModel(pnts);
     }
 
@@ -42,4 +43,8 @@ void Object::calculateTransform() {
 }
 float Object::getZetPosition() {
     return this->transform->M[3][2];
+}
+
+void Object::changeShader(Shader *sh) {
+  this->shader = sh;
 }

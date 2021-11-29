@@ -73,10 +73,6 @@ Camera* Render::generateCamera() {
     return new Camera(1366, 768, glm::vec3(1.0f, 1.0f, 15.0f));
 }
 
-Shader* Render::generateShader(int typ, Camera* cam, const char* vertFile, const char * fragFile) {
-    return new Shader(typ, cam, vertFile, fragFile);
-}
-
 void Render::CreateNewObject(Shader* sh)
 {
     std::cout << "Pokus o vygenerování nového objektu" << std::endl;
@@ -263,7 +259,7 @@ void Render::InitScene(){
         sc->addObject(new Object(sphere,shaders[3]));
         sc->addObject(new Object(sphere,shaders[0]));
 
-        sc->addObject(new Object(plain,shaders[2]));
+       sc->addObject(new Object(plain,shaders[2]));
         sc->addObject(new Object(skydome,shaders[1]));
 
         sc->getObject(0)->addTransform({"translate", 1,glm::vec3(-3, 0, 0)});
@@ -292,7 +288,7 @@ void Render::InitScene(){
         sc->getObject(5)->removeTransform({"scale", 1, glm::vec3(10.0f, 10.0f, 10.0f)});
 
     }
-    else if (actuallyScene == 3){
+    else if (actuallyScene == 2){
         sc->addObject(new Object(building,shaders[2]));
     }
 
@@ -359,21 +355,21 @@ void Render::RenderView() {
 
     Camera* cam = generateCamera(); // Vygenerování kamery
 
-    Shader* sh = generateShader(1,  cam, "../Shaders/shader1.vs", "../Shaders/shader1.fs");  // Normální model
+    Shader* sh = new Shader(cam, "../Shaders/shader1.vs", "../Shaders/shader1.fs");  // Normální model
 
     //sh = loadShader("/Shaders/shader1.vs", "/Shaders/shader1.fs")
     shaders.push_back(sh);
 
     sh = NULL;
-    sh = generateShader(2, cam, "../Shaders/shader2.vs", "../Shaders/shader2.fs");        // Texturovaný model - texturovací jednotka 0;
+    sh = new Shader(cam, "../Shaders/shader2.vs", "../Shaders/shader2.fs", 0);        // Texturovaný model - texturovací jednotka 0;
     shaders.push_back(sh);
 
     sh = NULL;
-    sh = generateShader(3, cam, "../Shaders/shader2.vs", "../Shaders/shader2.fs");        // Texturovaný model - texturovací jednotka 1
+    sh = new Shader(cam, "../Shaders/shader2.vs", "../Shaders/shader2.fs", 1);        // Texturovaný model - texturovací jednotka 1
     shaders.push_back(sh);
 
     sh = NULL;
-    sh = generateShader(1, cam, "../Shaders/shader3.vs", "../Shaders/shader3.fs");        // Normálmní model - červený
+    sh = new Shader(cam, "../Shaders/shader3.vs", "../Shaders/shader3.fs");        // Normálmní model - červený
     shaders.push_back(sh);
 
     InitScene();        //Inicializace scény
@@ -396,6 +392,7 @@ void Render::RenderView() {
             std::cout << "Button pressed" << std::endl;
             CreateNewObject(shaders[0]);
             firstclick = true;
+            scenes[actuallyScene]->getObject(0)->changeShader(shaders[3]);
         }
 
         for (int i = 0; i < scenes[actuallyScene]->getNumberOfObjects(); i++) {
