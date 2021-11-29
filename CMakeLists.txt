@@ -26,7 +26,7 @@ set(SOIL_LINK /Users/jenda/Documents/GitHub/soil/libSOIL/libSOIL.dylib)
 link_libraries(${OPENGL} ${GLEW_LINK} ${GLFW_LINK} ${SOIL_STATIC} ${SOIL_LINK})
 
 set(SOURCE_FILES main.cpp)
-add_executable(zpg-game main.cpp Render.cpp Render.h Object.cpp Object.h Shader.cpp Shader.h Model.cpp Model.h Transform.cpp Transform.h Scene.cpp Scene.h Storage.cpp Storage.h ObjectFactory.cpp ObjectFactory.h Camera.cpp Camera.h TexturedModel.cpp TexturedModel.h)
+add_executable(zpg-game main.cpp Render.cpp Render.h Object.cpp Object.h Shader.cpp Shader.h Model.cpp Model.h Transform.cpp Transform.h Scene.cpp Scene.h Storage.cpp Storage.h ObjectFactory.cpp ObjectFactory.h Camera.cpp Camera.h TexturedModel.cpp TexturedModel.h ShaderLoader.cpp ShaderLoader.h)
 
 find_package(OpenGL REQUIRED)
 find_package(OpenCV REQUIRED)

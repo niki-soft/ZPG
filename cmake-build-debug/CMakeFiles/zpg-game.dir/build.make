@@ -53,10 +53,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/jenda/CLionProjects/zpg-game2
+CMAKE_SOURCE_DIR = /Users/jenda/CLionProjects/zpg-game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/jenda/CLionProjects/zpg-game2/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/jenda/CLionProjects/zpg-game/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/zpg-game.dir/depend.make
@@ -68,146 +68,159 @@ include CMakeFiles/zpg-game.dir/flags.make
 
 CMakeFiles/zpg-game.dir/main.cpp.o: CMakeFiles/zpg-game.dir/flags.make
 CMakeFiles/zpg-game.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/zpg-game.dir/main.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zpg-game.dir/main.cpp.o -c /Users/jenda/CLionProjects/zpg-game2/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/zpg-game.dir/main.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zpg-game.dir/main.cpp.o -c /Users/jenda/CLionProjects/zpg-game/main.cpp
 
 CMakeFiles/zpg-game.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/zpg-game.dir/main.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jenda/CLionProjects/zpg-game2/main.cpp > CMakeFiles/zpg-game.dir/main.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jenda/CLionProjects/zpg-game/main.cpp > CMakeFiles/zpg-game.dir/main.cpp.i
 
 CMakeFiles/zpg-game.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zpg-game.dir/main.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jenda/CLionProjects/zpg-game2/main.cpp -o CMakeFiles/zpg-game.dir/main.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jenda/CLionProjects/zpg-game/main.cpp -o CMakeFiles/zpg-game.dir/main.cpp.s
 
 CMakeFiles/zpg-game.dir/Render.cpp.o: CMakeFiles/zpg-game.dir/flags.make
 CMakeFiles/zpg-game.dir/Render.cpp.o: ../Render.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/zpg-game.dir/Render.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zpg-game.dir/Render.cpp.o -c /Users/jenda/CLionProjects/zpg-game2/Render.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/zpg-game.dir/Render.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zpg-game.dir/Render.cpp.o -c /Users/jenda/CLionProjects/zpg-game/Render.cpp
 
 CMakeFiles/zpg-game.dir/Render.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/zpg-game.dir/Render.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jenda/CLionProjects/zpg-game2/Render.cpp > CMakeFiles/zpg-game.dir/Render.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jenda/CLionProjects/zpg-game/Render.cpp > CMakeFiles/zpg-game.dir/Render.cpp.i
 
 CMakeFiles/zpg-game.dir/Render.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zpg-game.dir/Render.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jenda/CLionProjects/zpg-game2/Render.cpp -o CMakeFiles/zpg-game.dir/Render.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jenda/CLionProjects/zpg-game/Render.cpp -o CMakeFiles/zpg-game.dir/Render.cpp.s
 
 CMakeFiles/zpg-game.dir/Object.cpp.o: CMakeFiles/zpg-game.dir/flags.make
 CMakeFiles/zpg-game.dir/Object.cpp.o: ../Object.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/zpg-game.dir/Object.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zpg-game.dir/Object.cpp.o -c /Users/jenda/CLionProjects/zpg-game2/Object.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/zpg-game.dir/Object.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zpg-game.dir/Object.cpp.o -c /Users/jenda/CLionProjects/zpg-game/Object.cpp
 
 CMakeFiles/zpg-game.dir/Object.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/zpg-game.dir/Object.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jenda/CLionProjects/zpg-game2/Object.cpp > CMakeFiles/zpg-game.dir/Object.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jenda/CLionProjects/zpg-game/Object.cpp > CMakeFiles/zpg-game.dir/Object.cpp.i
 
 CMakeFiles/zpg-game.dir/Object.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zpg-game.dir/Object.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jenda/CLionProjects/zpg-game2/Object.cpp -o CMakeFiles/zpg-game.dir/Object.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jenda/CLionProjects/zpg-game/Object.cpp -o CMakeFiles/zpg-game.dir/Object.cpp.s
 
 CMakeFiles/zpg-game.dir/Shader.cpp.o: CMakeFiles/zpg-game.dir/flags.make
 CMakeFiles/zpg-game.dir/Shader.cpp.o: ../Shader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/zpg-game.dir/Shader.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zpg-game.dir/Shader.cpp.o -c /Users/jenda/CLionProjects/zpg-game2/Shader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/zpg-game.dir/Shader.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zpg-game.dir/Shader.cpp.o -c /Users/jenda/CLionProjects/zpg-game/Shader.cpp
 
 CMakeFiles/zpg-game.dir/Shader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/zpg-game.dir/Shader.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jenda/CLionProjects/zpg-game2/Shader.cpp > CMakeFiles/zpg-game.dir/Shader.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jenda/CLionProjects/zpg-game/Shader.cpp > CMakeFiles/zpg-game.dir/Shader.cpp.i
 
 CMakeFiles/zpg-game.dir/Shader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zpg-game.dir/Shader.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jenda/CLionProjects/zpg-game2/Shader.cpp -o CMakeFiles/zpg-game.dir/Shader.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jenda/CLionProjects/zpg-game/Shader.cpp -o CMakeFiles/zpg-game.dir/Shader.cpp.s
 
 CMakeFiles/zpg-game.dir/Model.cpp.o: CMakeFiles/zpg-game.dir/flags.make
 CMakeFiles/zpg-game.dir/Model.cpp.o: ../Model.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/zpg-game.dir/Model.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zpg-game.dir/Model.cpp.o -c /Users/jenda/CLionProjects/zpg-game2/Model.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/zpg-game.dir/Model.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zpg-game.dir/Model.cpp.o -c /Users/jenda/CLionProjects/zpg-game/Model.cpp
 
 CMakeFiles/zpg-game.dir/Model.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/zpg-game.dir/Model.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jenda/CLionProjects/zpg-game2/Model.cpp > CMakeFiles/zpg-game.dir/Model.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jenda/CLionProjects/zpg-game/Model.cpp > CMakeFiles/zpg-game.dir/Model.cpp.i
 
 CMakeFiles/zpg-game.dir/Model.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zpg-game.dir/Model.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jenda/CLionProjects/zpg-game2/Model.cpp -o CMakeFiles/zpg-game.dir/Model.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jenda/CLionProjects/zpg-game/Model.cpp -o CMakeFiles/zpg-game.dir/Model.cpp.s
 
 CMakeFiles/zpg-game.dir/Transform.cpp.o: CMakeFiles/zpg-game.dir/flags.make
 CMakeFiles/zpg-game.dir/Transform.cpp.o: ../Transform.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/zpg-game.dir/Transform.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zpg-game.dir/Transform.cpp.o -c /Users/jenda/CLionProjects/zpg-game2/Transform.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/zpg-game.dir/Transform.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zpg-game.dir/Transform.cpp.o -c /Users/jenda/CLionProjects/zpg-game/Transform.cpp
 
 CMakeFiles/zpg-game.dir/Transform.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/zpg-game.dir/Transform.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jenda/CLionProjects/zpg-game2/Transform.cpp > CMakeFiles/zpg-game.dir/Transform.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jenda/CLionProjects/zpg-game/Transform.cpp > CMakeFiles/zpg-game.dir/Transform.cpp.i
 
 CMakeFiles/zpg-game.dir/Transform.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zpg-game.dir/Transform.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jenda/CLionProjects/zpg-game2/Transform.cpp -o CMakeFiles/zpg-game.dir/Transform.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jenda/CLionProjects/zpg-game/Transform.cpp -o CMakeFiles/zpg-game.dir/Transform.cpp.s
 
 CMakeFiles/zpg-game.dir/Scene.cpp.o: CMakeFiles/zpg-game.dir/flags.make
 CMakeFiles/zpg-game.dir/Scene.cpp.o: ../Scene.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/zpg-game.dir/Scene.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zpg-game.dir/Scene.cpp.o -c /Users/jenda/CLionProjects/zpg-game2/Scene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/zpg-game.dir/Scene.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zpg-game.dir/Scene.cpp.o -c /Users/jenda/CLionProjects/zpg-game/Scene.cpp
 
 CMakeFiles/zpg-game.dir/Scene.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/zpg-game.dir/Scene.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jenda/CLionProjects/zpg-game2/Scene.cpp > CMakeFiles/zpg-game.dir/Scene.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jenda/CLionProjects/zpg-game/Scene.cpp > CMakeFiles/zpg-game.dir/Scene.cpp.i
 
 CMakeFiles/zpg-game.dir/Scene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zpg-game.dir/Scene.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jenda/CLionProjects/zpg-game2/Scene.cpp -o CMakeFiles/zpg-game.dir/Scene.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jenda/CLionProjects/zpg-game/Scene.cpp -o CMakeFiles/zpg-game.dir/Scene.cpp.s
 
 CMakeFiles/zpg-game.dir/Storage.cpp.o: CMakeFiles/zpg-game.dir/flags.make
 CMakeFiles/zpg-game.dir/Storage.cpp.o: ../Storage.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/zpg-game.dir/Storage.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zpg-game.dir/Storage.cpp.o -c /Users/jenda/CLionProjects/zpg-game2/Storage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/zpg-game.dir/Storage.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zpg-game.dir/Storage.cpp.o -c /Users/jenda/CLionProjects/zpg-game/Storage.cpp
 
 CMakeFiles/zpg-game.dir/Storage.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/zpg-game.dir/Storage.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jenda/CLionProjects/zpg-game2/Storage.cpp > CMakeFiles/zpg-game.dir/Storage.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jenda/CLionProjects/zpg-game/Storage.cpp > CMakeFiles/zpg-game.dir/Storage.cpp.i
 
 CMakeFiles/zpg-game.dir/Storage.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zpg-game.dir/Storage.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jenda/CLionProjects/zpg-game2/Storage.cpp -o CMakeFiles/zpg-game.dir/Storage.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jenda/CLionProjects/zpg-game/Storage.cpp -o CMakeFiles/zpg-game.dir/Storage.cpp.s
 
 CMakeFiles/zpg-game.dir/ObjectFactory.cpp.o: CMakeFiles/zpg-game.dir/flags.make
 CMakeFiles/zpg-game.dir/ObjectFactory.cpp.o: ../ObjectFactory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/zpg-game.dir/ObjectFactory.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zpg-game.dir/ObjectFactory.cpp.o -c /Users/jenda/CLionProjects/zpg-game2/ObjectFactory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/zpg-game.dir/ObjectFactory.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zpg-game.dir/ObjectFactory.cpp.o -c /Users/jenda/CLionProjects/zpg-game/ObjectFactory.cpp
 
 CMakeFiles/zpg-game.dir/ObjectFactory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/zpg-game.dir/ObjectFactory.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jenda/CLionProjects/zpg-game2/ObjectFactory.cpp > CMakeFiles/zpg-game.dir/ObjectFactory.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jenda/CLionProjects/zpg-game/ObjectFactory.cpp > CMakeFiles/zpg-game.dir/ObjectFactory.cpp.i
 
 CMakeFiles/zpg-game.dir/ObjectFactory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zpg-game.dir/ObjectFactory.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jenda/CLionProjects/zpg-game2/ObjectFactory.cpp -o CMakeFiles/zpg-game.dir/ObjectFactory.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jenda/CLionProjects/zpg-game/ObjectFactory.cpp -o CMakeFiles/zpg-game.dir/ObjectFactory.cpp.s
 
 CMakeFiles/zpg-game.dir/Camera.cpp.o: CMakeFiles/zpg-game.dir/flags.make
 CMakeFiles/zpg-game.dir/Camera.cpp.o: ../Camera.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/zpg-game.dir/Camera.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zpg-game.dir/Camera.cpp.o -c /Users/jenda/CLionProjects/zpg-game2/Camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/zpg-game.dir/Camera.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zpg-game.dir/Camera.cpp.o -c /Users/jenda/CLionProjects/zpg-game/Camera.cpp
 
 CMakeFiles/zpg-game.dir/Camera.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/zpg-game.dir/Camera.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jenda/CLionProjects/zpg-game2/Camera.cpp > CMakeFiles/zpg-game.dir/Camera.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jenda/CLionProjects/zpg-game/Camera.cpp > CMakeFiles/zpg-game.dir/Camera.cpp.i
 
 CMakeFiles/zpg-game.dir/Camera.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zpg-game.dir/Camera.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jenda/CLionProjects/zpg-game2/Camera.cpp -o CMakeFiles/zpg-game.dir/Camera.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jenda/CLionProjects/zpg-game/Camera.cpp -o CMakeFiles/zpg-game.dir/Camera.cpp.s
 
 CMakeFiles/zpg-game.dir/TexturedModel.cpp.o: CMakeFiles/zpg-game.dir/flags.make
 CMakeFiles/zpg-game.dir/TexturedModel.cpp.o: ../TexturedModel.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/zpg-game.dir/TexturedModel.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zpg-game.dir/TexturedModel.cpp.o -c /Users/jenda/CLionProjects/zpg-game2/TexturedModel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/zpg-game.dir/TexturedModel.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zpg-game.dir/TexturedModel.cpp.o -c /Users/jenda/CLionProjects/zpg-game/TexturedModel.cpp
 
 CMakeFiles/zpg-game.dir/TexturedModel.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/zpg-game.dir/TexturedModel.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jenda/CLionProjects/zpg-game2/TexturedModel.cpp > CMakeFiles/zpg-game.dir/TexturedModel.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jenda/CLionProjects/zpg-game/TexturedModel.cpp > CMakeFiles/zpg-game.dir/TexturedModel.cpp.i
 
 CMakeFiles/zpg-game.dir/TexturedModel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zpg-game.dir/TexturedModel.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jenda/CLionProjects/zpg-game2/TexturedModel.cpp -o CMakeFiles/zpg-game.dir/TexturedModel.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jenda/CLionProjects/zpg-game/TexturedModel.cpp -o CMakeFiles/zpg-game.dir/TexturedModel.cpp.s
+
+CMakeFiles/zpg-game.dir/ShaderLoader.cpp.o: CMakeFiles/zpg-game.dir/flags.make
+CMakeFiles/zpg-game.dir/ShaderLoader.cpp.o: ../ShaderLoader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/zpg-game.dir/ShaderLoader.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/zpg-game.dir/ShaderLoader.cpp.o -c /Users/jenda/CLionProjects/zpg-game/ShaderLoader.cpp
+
+CMakeFiles/zpg-game.dir/ShaderLoader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/zpg-game.dir/ShaderLoader.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jenda/CLionProjects/zpg-game/ShaderLoader.cpp > CMakeFiles/zpg-game.dir/ShaderLoader.cpp.i
+
+CMakeFiles/zpg-game.dir/ShaderLoader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zpg-game.dir/ShaderLoader.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jenda/CLionProjects/zpg-game/ShaderLoader.cpp -o CMakeFiles/zpg-game.dir/ShaderLoader.cpp.s
 
 # Object files for target zpg-game
 zpg__game_OBJECTS = \
@@ -221,7 +234,8 @@ zpg__game_OBJECTS = \
 "CMakeFiles/zpg-game.dir/Storage.cpp.o" \
 "CMakeFiles/zpg-game.dir/ObjectFactory.cpp.o" \
 "CMakeFiles/zpg-game.dir/Camera.cpp.o" \
-"CMakeFiles/zpg-game.dir/TexturedModel.cpp.o"
+"CMakeFiles/zpg-game.dir/TexturedModel.cpp.o" \
+"CMakeFiles/zpg-game.dir/ShaderLoader.cpp.o"
 
 # External object files for target zpg-game
 zpg__game_EXTERNAL_OBJECTS =
@@ -237,6 +251,7 @@ zpg-game: CMakeFiles/zpg-game.dir/Storage.cpp.o
 zpg-game: CMakeFiles/zpg-game.dir/ObjectFactory.cpp.o
 zpg-game: CMakeFiles/zpg-game.dir/Camera.cpp.o
 zpg-game: CMakeFiles/zpg-game.dir/TexturedModel.cpp.o
+zpg-game: CMakeFiles/zpg-game.dir/ShaderLoader.cpp.o
 zpg-game: CMakeFiles/zpg-game.dir/build.make
 zpg-game: /usr/local/Cellar/glew/2.2.0_1/lib/libGLEW.2.2.dylib
 zpg-game: /usr/local/Cellar/glfw/3.3.4/lib/libglfw.3.dylib
@@ -298,7 +313,7 @@ zpg-game: /usr/local/lib/libopencv_photo.4.5.3.dylib
 zpg-game: /usr/local/lib/libopencv_imgproc.4.5.3.dylib
 zpg-game: /usr/local/lib/libopencv_core.4.5.3.dylib
 zpg-game: CMakeFiles/zpg-game.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable zpg-game"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable zpg-game"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/zpg-game.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -310,6 +325,6 @@ CMakeFiles/zpg-game.dir/clean:
 .PHONY : CMakeFiles/zpg-game.dir/clean
 
 CMakeFiles/zpg-game.dir/depend:
-	cd /Users/jenda/CLionProjects/zpg-game2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/jenda/CLionProjects/zpg-game2 /Users/jenda/CLionProjects/zpg-game2 /Users/jenda/CLionProjects/zpg-game2/cmake-build-debug /Users/jenda/CLionProjects/zpg-game2/cmake-build-debug /Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/CMakeFiles/zpg-game.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/jenda/CLionProjects/zpg-game/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/jenda/CLionProjects/zpg-game /Users/jenda/CLionProjects/zpg-game /Users/jenda/CLionProjects/zpg-game/cmake-build-debug /Users/jenda/CLionProjects/zpg-game/cmake-build-debug /Users/jenda/CLionProjects/zpg-game/cmake-build-debug/CMakeFiles/zpg-game.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/zpg-game.dir/depend
 

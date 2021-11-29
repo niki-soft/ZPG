@@ -16,6 +16,8 @@
 #include </usr/local/Cellar/glm/0.9.9.8/include/glm/gtc/matrix_transform.hpp> // glm::translate, glm::rotate, glm::scale, glm::perspective
 #include </usr/local/Cellar/glm/0.9.9.8/include/glm/gtc/type_ptr.hpp> // glm::value_ptr
 
+#include "ShaderLoader.h"
+
 // Include SOIL
 //#include "/usr/local/include/SOIL/SOIL.h"
 
@@ -36,12 +38,12 @@ private:
     GLint CamPos;
     GLuint uniformID;
 
-    void compileShader();
+    void compileShader(const char* fragFile, const char* vertFile);
 
 public:
     int type;
     Camera *camera;
-    Shader(int type, Camera* camera);
+    Shader(int type, Camera* camera, const char* fragFile, const char* vertFile);
     void setShader(glm::mat4 M);
 };
 

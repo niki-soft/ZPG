@@ -1,9 +1,8 @@
-#version 400\n
+#version 400 core
 in vec3 Normals;
 in vec3 FragPos;
 uniform vec3 CamPosition;
 out vec4 FragColor;
-
 void main () {
     vec3 lightPos = vec3(0.0f, 0.0f, 0.0f);
     vec3 lightVector = lightPos - FragPos;

@@ -57,10 +57,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/jenda/CLionProjects/zpg-game2
+CMAKE_SOURCE_DIR = /Users/jenda/CLionProjects/zpg-game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/jenda/CLionProjects/zpg-game2/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/jenda/CLionProjects/zpg-game/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/CMakeFiles /Users/jenda/CLionProjects/zpg-game2/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jenda/CLionProjects/zpg-game/cmake-build-debug/CMakeFiles /Users/jenda/CLionProjects/zpg-game/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jenda/CLionProjects/zpg-game/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -309,6 +309,30 @@ Shader.s: Shader.cpp.s
 Shader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/zpg-game.dir/build.make CMakeFiles/zpg-game.dir/Shader.cpp.s
 .PHONY : Shader.cpp.s
+
+ShaderLoader.o: ShaderLoader.cpp.o
+.PHONY : ShaderLoader.o
+
+# target to build an object file
+ShaderLoader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/zpg-game.dir/build.make CMakeFiles/zpg-game.dir/ShaderLoader.cpp.o
+.PHONY : ShaderLoader.cpp.o
+
+ShaderLoader.i: ShaderLoader.cpp.i
+.PHONY : ShaderLoader.i
+
+# target to preprocess a source file
+ShaderLoader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/zpg-game.dir/build.make CMakeFiles/zpg-game.dir/ShaderLoader.cpp.i
+.PHONY : ShaderLoader.cpp.i
+
+ShaderLoader.s: ShaderLoader.cpp.s
+.PHONY : ShaderLoader.s
+
+# target to generate assembly for a file
+ShaderLoader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/zpg-game.dir/build.make CMakeFiles/zpg-game.dir/ShaderLoader.cpp.s
+.PHONY : ShaderLoader.cpp.s
 
 Storage.o: Storage.cpp.o
 .PHONY : Storage.o
@@ -533,6 +557,9 @@ help:
 	@echo "... Shader.o"
 	@echo "... Shader.i"
 	@echo "... Shader.s"
+	@echo "... ShaderLoader.o"
+	@echo "... ShaderLoader.i"
+	@echo "... ShaderLoader.s"
 	@echo "... Storage.o"
 	@echo "... Storage.i"
 	@echo "... Storage.s"

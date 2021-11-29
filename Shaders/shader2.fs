@@ -1,4 +1,4 @@
-#version 400\n
+#version 400 core
 in vec3 Normals;
 in vec3 FragPos;
 uniform vec3 CamPosition;

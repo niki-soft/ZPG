@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\usr\local\lib\cmake\opencv4\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug"/>
+				<Option working_dir="/Users/jenda/CLionProjects/zpg-game/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug"/>
+				<Option working_dir="/Users/jenda/CLionProjects/zpg-game/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug"/>
+				<Option working_dir="/Users/jenda/CLionProjects/zpg-game/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="zpg-game">
-				<Option output="/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/zpg-game" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug"/>
+				<Option output="/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/zpg-game" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jenda/CLionProjects/zpg-game/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -60,15 +60,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/Makefile&quot;  VERBOSE=1 zpg-game"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 zpg-game"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="zpg-game/fast">
-				<Option output="/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/zpg-game" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug"/>
+				<Option output="/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/zpg-game" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jenda/CLionProjects/zpg-game/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -89,15 +89,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/Makefile&quot;  VERBOSE=1 zpg-game/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 zpg-game/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="SOIL_STATIC">
-				<Option output="/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/libSOIL_STATIC.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug"/>
+				<Option output="/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/libSOIL_STATIC.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jenda/CLionProjects/zpg-game/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
@@ -117,15 +117,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/Makefile&quot;  VERBOSE=1 SOIL_STATIC"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 SOIL_STATIC"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="SOIL_STATIC/fast">
-				<Option output="/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/libSOIL_STATIC.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug"/>
+				<Option output="/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/libSOIL_STATIC.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jenda/CLionProjects/zpg-game/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
@@ -145,74 +145,80 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/Makefile&quot;  VERBOSE=1 SOIL_STATIC/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 SOIL_STATIC/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/jenda/CLionProjects/zpg-game2/Camera.cpp">
+		<Unit filename="/Users/jenda/CLionProjects/zpg-game/Camera.cpp">
 			<Option target="zpg-game"/>
 		</Unit>
-		<Unit filename="/Users/jenda/CLionProjects/zpg-game2/Camera.h">
+		<Unit filename="/Users/jenda/CLionProjects/zpg-game/Camera.h">
 			<Option target="zpg-game"/>
 		</Unit>
-		<Unit filename="/Users/jenda/CLionProjects/zpg-game2/Model.cpp">
+		<Unit filename="/Users/jenda/CLionProjects/zpg-game/Model.cpp">
 			<Option target="zpg-game"/>
 		</Unit>
-		<Unit filename="/Users/jenda/CLionProjects/zpg-game2/Model.h">
+		<Unit filename="/Users/jenda/CLionProjects/zpg-game/Model.h">
 			<Option target="zpg-game"/>
 		</Unit>
-		<Unit filename="/Users/jenda/CLionProjects/zpg-game2/Object.cpp">
+		<Unit filename="/Users/jenda/CLionProjects/zpg-game/Object.cpp">
 			<Option target="zpg-game"/>
 		</Unit>
-		<Unit filename="/Users/jenda/CLionProjects/zpg-game2/Object.h">
+		<Unit filename="/Users/jenda/CLionProjects/zpg-game/Object.h">
 			<Option target="zpg-game"/>
 		</Unit>
-		<Unit filename="/Users/jenda/CLionProjects/zpg-game2/ObjectFactory.cpp">
+		<Unit filename="/Users/jenda/CLionProjects/zpg-game/ObjectFactory.cpp">
 			<Option target="zpg-game"/>
 		</Unit>
-		<Unit filename="/Users/jenda/CLionProjects/zpg-game2/ObjectFactory.h">
+		<Unit filename="/Users/jenda/CLionProjects/zpg-game/ObjectFactory.h">
 			<Option target="zpg-game"/>
 		</Unit>
-		<Unit filename="/Users/jenda/CLionProjects/zpg-game2/Render.cpp">
+		<Unit filename="/Users/jenda/CLionProjects/zpg-game/Render.cpp">
 			<Option target="zpg-game"/>
 		</Unit>
-		<Unit filename="/Users/jenda/CLionProjects/zpg-game2/Render.h">
+		<Unit filename="/Users/jenda/CLionProjects/zpg-game/Render.h">
 			<Option target="zpg-game"/>
 		</Unit>
-		<Unit filename="/Users/jenda/CLionProjects/zpg-game2/Scene.cpp">
+		<Unit filename="/Users/jenda/CLionProjects/zpg-game/Scene.cpp">
 			<Option target="zpg-game"/>
 		</Unit>
-		<Unit filename="/Users/jenda/CLionProjects/zpg-game2/Scene.h">
+		<Unit filename="/Users/jenda/CLionProjects/zpg-game/Scene.h">
 			<Option target="zpg-game"/>
 		</Unit>
-		<Unit filename="/Users/jenda/CLionProjects/zpg-game2/Shader.cpp">
+		<Unit filename="/Users/jenda/CLionProjects/zpg-game/Shader.cpp">
 			<Option target="zpg-game"/>
 		</Unit>
-		<Unit filename="/Users/jenda/CLionProjects/zpg-game2/Shader.h">
+		<Unit filename="/Users/jenda/CLionProjects/zpg-game/Shader.h">
 			<Option target="zpg-game"/>
 		</Unit>
-		<Unit filename="/Users/jenda/CLionProjects/zpg-game2/Storage.cpp">
+		<Unit filename="/Users/jenda/CLionProjects/zpg-game/ShaderLoader.cpp">
 			<Option target="zpg-game"/>
 		</Unit>
-		<Unit filename="/Users/jenda/CLionProjects/zpg-game2/Storage.h">
+		<Unit filename="/Users/jenda/CLionProjects/zpg-game/ShaderLoader.h">
 			<Option target="zpg-game"/>
 		</Unit>
-		<Unit filename="/Users/jenda/CLionProjects/zpg-game2/TexturedModel.cpp">
+		<Unit filename="/Users/jenda/CLionProjects/zpg-game/Storage.cpp">
 			<Option target="zpg-game"/>
 		</Unit>
-		<Unit filename="/Users/jenda/CLionProjects/zpg-game2/TexturedModel.h">
+		<Unit filename="/Users/jenda/CLionProjects/zpg-game/Storage.h">
 			<Option target="zpg-game"/>
 		</Unit>
-		<Unit filename="/Users/jenda/CLionProjects/zpg-game2/Transform.cpp">
+		<Unit filename="/Users/jenda/CLionProjects/zpg-game/TexturedModel.cpp">
 			<Option target="zpg-game"/>
 		</Unit>
-		<Unit filename="/Users/jenda/CLionProjects/zpg-game2/Transform.h">
+		<Unit filename="/Users/jenda/CLionProjects/zpg-game/TexturedModel.h">
 			<Option target="zpg-game"/>
 		</Unit>
-		<Unit filename="/Users/jenda/CLionProjects/zpg-game2/main.cpp">
+		<Unit filename="/Users/jenda/CLionProjects/zpg-game/Transform.cpp">
+			<Option target="zpg-game"/>
+		</Unit>
+		<Unit filename="/Users/jenda/CLionProjects/zpg-game/Transform.h">
+			<Option target="zpg-game"/>
+		</Unit>
+		<Unit filename="/Users/jenda/CLionProjects/zpg-game/main.cpp">
 			<Option target="zpg-game"/>
 		</Unit>
 		<Unit filename="/Users/jenda/Documents/GitHub/soil/libSOIL/SOIL.c">
@@ -239,19 +245,19 @@
 		<Unit filename="/Users/jenda/Documents/GitHub/soil/libSOIL/stb_image_aug.h">
 			<Option target="SOIL_STATIC"/>
 		</Unit>
-		<Unit filename="/Users/jenda/CLionProjects/zpg-game2/CMakeLists.txt">
+		<Unit filename="/Users/jenda/CLionProjects/zpg-game/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/Users/jenda/CLionProjects/zpg-game2/../../../../usr/local/lib/cmake/opencv4/OpenCVConfig-version.cmake">
+		<Unit filename="/Users/jenda/CLionProjects/zpg-game/../../../../usr/local/lib/cmake/opencv4/OpenCVConfig-version.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
 		</Unit>
-		<Unit filename="/Users/jenda/CLionProjects/zpg-game2/../../../../usr/local/lib/cmake/opencv4/OpenCVConfig.cmake">
+		<Unit filename="/Users/jenda/CLionProjects/zpg-game/../../../../usr/local/lib/cmake/opencv4/OpenCVConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
 		</Unit>
-		<Unit filename="/Users/jenda/CLionProjects/zpg-game2/../../../../usr/local/lib/cmake/opencv4/OpenCVModules-release.cmake">
+		<Unit filename="/Users/jenda/CLionProjects/zpg-game/../../../../usr/local/lib/cmake/opencv4/OpenCVModules-release.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
 		</Unit>
-		<Unit filename="/Users/jenda/CLionProjects/zpg-game2/../../../../usr/local/lib/cmake/opencv4/OpenCVModules.cmake">
+		<Unit filename="/Users/jenda/CLionProjects/zpg-game/../../../../usr/local/lib/cmake/opencv4/OpenCVModules.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
 		</Unit>
 	</Project>

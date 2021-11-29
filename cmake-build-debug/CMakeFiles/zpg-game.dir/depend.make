@@ -5,6 +5,7 @@ CMakeFiles/zpg-game.dir/Camera.cpp.o: \
  ../Camera.cpp \
  ../Camera.h \
  ../Shader.h \
+ ../ShaderLoader.h \
  /usr/local/Cellar/glew/2.2.0_1/include/GL/glew.h \
  /usr/local/Cellar/glfw/3.3.4/include/GLFW/glfw3.h \
  /usr/local/Cellar/glm/0.9.9.8/include/glm/common.hpp \
@@ -212,6 +213,7 @@ CMakeFiles/zpg-game.dir/Model.cpp.o: \
  ../Model.cpp \
  ../Model.h \
  ../Shader.h \
+ ../ShaderLoader.h \
  /usr/local/Cellar/glew/2.2.0_1/include/GL/glew.h \
  /usr/local/Cellar/glfw/3.3.4/include/GLFW/glfw3.h \
  /usr/local/Cellar/glm/0.9.9.8/include/glm/common.hpp \
@@ -523,6 +525,7 @@ CMakeFiles/zpg-game.dir/Object.cpp.o: \
  ../Object.cpp \
  ../Object.h \
  ../Shader.h \
+ ../ShaderLoader.h \
  ../TexturedModel.h \
  ../Transform.h \
  /usr/local/Cellar/glew/2.2.0_1/include/GL/glew.h \
@@ -836,6 +839,7 @@ CMakeFiles/zpg-game.dir/ObjectFactory.cpp.o: \
  ../ObjectFactory.cpp \
  ../ObjectFactory.h \
  ../Shader.h \
+ ../ShaderLoader.h \
  /usr/local/Cellar/glew/2.2.0_1/include/GL/glew.h \
  /usr/local/Cellar/glfw/3.3.4/include/GLFW/glfw3.h \
  /usr/local/Cellar/glm/0.9.9.8/include/glm/common.hpp \
@@ -1150,6 +1154,7 @@ CMakeFiles/zpg-game.dir/Render.cpp.o: \
  ../Render.h \
  ../Scene.h \
  ../Shader.h \
+ ../ShaderLoader.h \
  ../Storage.h \
  ../TexturedModel.h \
  ../Transform.h \
@@ -1473,6 +1478,7 @@ CMakeFiles/zpg-game.dir/Scene.cpp.o: \
  ../Scene.cpp \
  ../Scene.h \
  ../Shader.h \
+ ../ShaderLoader.h \
  ../Storage.h \
  ../TexturedModel.h \
  ../Transform.h \
@@ -1785,6 +1791,7 @@ CMakeFiles/zpg-game.dir/Shader.cpp.o: \
  ../Camera.h \
  ../Shader.cpp \
  ../Shader.h \
+ ../ShaderLoader.h \
  /usr/local/Cellar/glew/2.2.0_1/include/GL/glew.h \
  /usr/local/Cellar/glfw/3.3.4/include/GLFW/glfw3.h \
  /usr/local/Cellar/glm/0.9.9.8/include/glm/common.hpp \
@@ -1988,11 +1995,16 @@ CMakeFiles/zpg-game.dir/Shader.cpp.o: \
  /usr/local/Cellar/glm/0.9.9.8/include/glm/vec3.hpp \
  /usr/local/Cellar/glm/0.9.9.8/include/glm/vec4.hpp \
  /usr/local/Cellar/glm/0.9.9.8/include/glm/vector_relational.hpp
+CMakeFiles/zpg-game.dir/ShaderLoader.cpp.o: \
+ ../ShaderLoader.cpp \
+ ../ShaderLoader.h \
+ /usr/local/Cellar/glew/2.2.0_1/include/GL/glew.h
 CMakeFiles/zpg-game.dir/Storage.cpp.o: \
  ../Camera.h \
  ../Model.h \
  ../Object.h \
  ../Shader.h \
+ ../ShaderLoader.h \
  ../Storage.cpp \
  ../Storage.h \
  ../TexturedModel.h \
@@ -2305,6 +2317,7 @@ CMakeFiles/zpg-game.dir/Storage.cpp.o: \
 CMakeFiles/zpg-game.dir/TexturedModel.cpp.o: \
  ../Model.h \
  ../Shader.h \
+ ../ShaderLoader.h \
  ../TexturedModel.cpp \
  ../TexturedModel.h \
  /usr/local/Cellar/glew/2.2.0_1/include/GL/glew.h \
@@ -2826,6 +2839,7 @@ CMakeFiles/zpg-game.dir/main.cpp.o: \
  ../Render.h \
  ../Scene.h \
  ../Shader.h \
+ ../ShaderLoader.h \
  ../Storage.h \
  ../TexturedModel.h \
  ../Transform.h \

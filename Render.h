@@ -29,6 +29,7 @@
 #include "Scene.h"
 #include "ObjectFactory.h"
 
+
 class Render
 {
 private:
@@ -53,7 +54,7 @@ private:
 
     void LoadTextures();
     Camera* generateCamera();
-    Shader* generateShader(int type, Camera* cam);
+    Shader* generateShader(int type, Camera* cam, const char* vertFile, const char* fragFile);
 
     Render();
 

@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/zpg-game.dir/Render.cpp.o"
   "CMakeFiles/zpg-game.dir/Scene.cpp.o"
   "CMakeFiles/zpg-game.dir/Shader.cpp.o"
+  "CMakeFiles/zpg-game.dir/ShaderLoader.cpp.o"
   "CMakeFiles/zpg-game.dir/Storage.cpp.o"
   "CMakeFiles/zpg-game.dir/TexturedModel.cpp.o"
   "CMakeFiles/zpg-game.dir/Transform.cpp.o"

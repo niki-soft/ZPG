@@ -54,18 +54,18 @@ void Render::LoadTextures() {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
     glGenerateMipmap(GL_TEXTURE_2D);
     img.release();
-
-    img = cv::imread("floor2.png", 1);
-    cv::flip(img, img, 0);
+    cv::Mat newimg;
+    newimg =cv::imread("floor2.png", 1);
+    cv::flip(newimg, newimg, 0);
     glGenTextures(1, &textureID);
     glActiveTexture(GL_TEXTURE1);
     glBindTexture(GL_TEXTURE_2D, textureID);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, img.cols, img.rows, 0, GL_BGR, GL_UNSIGNED_BYTE, img.ptr());
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, newimg.cols, newimg.rows, 0, GL_RGB, GL_UNSIGNED_BYTE, newimg.ptr());
 
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
     glGenerateMipmap(GL_TEXTURE_2D);
-    img.release();
+    newimg.release();
 
 }
 
@@ -73,8 +73,8 @@ Camera* Render::generateCamera() {
     return new Camera(1366, 768, glm::vec3(1.0f, 1.0f, 15.0f));
 }
 
-Shader* Render::generateShader(int typ, Camera* cam) {
-    return new Shader(typ, cam);
+Shader* Render::generateShader(int typ, Camera* cam, const char* vertFile, const char * fragFile) {
+    return new Shader(typ, cam, vertFile, fragFile);
 }
 
 void Render::CreateNewObject(Shader* sh)
@@ -91,14 +91,14 @@ void Render::CreateNewObject(Shader* sh)
     sc->getObject(sc->getNumberOfObjects()-1)->addTransform({"translate", 1, pos});
     sc->getObject(sc->getNumberOfObjects()-1)->calculateTransform();
     sc->getObject(sc->getNumberOfObjects()-1)->removeTransform({"translate", 1, pos});
-    sc->getObject(sc->getNumberOfObjects()-1)->addTransform({"translate", 1, glm::vec3(ori.x/75, ori.y/75, ori.z/75)});
+    sc->getObject(sc->getNumberOfObjects()-1)->
+    addTransform({"translate", 1, glm::vec3(ori.x/5, ori.y/5, ori.z/5)});
 
     std::cout << "Nový objekt vygenerován" << std::endl;
 }
 
+// Callback
 void Render::error_callback(int error, const char* description) { fputs(description, stderr); }
-
-
 void Render::key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
 {
     if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
@@ -111,7 +111,6 @@ void Render::key_callback(GLFWwindow* window, int key, int scancode, int action,
 
     printf("key_callback [%d,%d,%d,%d] \n", key, scancode, action, mods);
 }
-
 void Render::window_focus_callback(GLFWwindow* window, int focused) { printf("window_focus_callback \n"); }
 void Render::window_iconify_callback(GLFWwindow* window, int iconified) { printf("window_iconify_callback \n"); }
 void Render::window_size_callback(GLFWwindow* window, int width, int height) {
@@ -124,7 +123,6 @@ void Render::cursor_callback(GLFWwindow* window, double x, double y) {
 
     //std::cout << x << "," << y << std::endl;
 }
-
 void Render::button_callback(GLFWwindow* window, int button, int action, int mode) {
 
 
@@ -148,7 +146,6 @@ void Render::button_callback(GLFWwindow* window, int button, int action, int mod
     {
         zn = 1;
     }
-
 }
 
 void Render::GLMtest()
@@ -170,7 +167,7 @@ void Render::InitScene(){
     sc = scenes[actuallyScene];
 
     if (actuallyScene==0) {
-        sc->addObject(new Object(c, shaders[0]));
+        sc->addObject(new Object(c, shaders[3]));
         sc->addObject(new Object(c, shaders[0]));
         sc->addObject(new Object(c, shaders[0]));
         sc->addObject(new Object(c, shaders[0]));
@@ -263,7 +260,7 @@ void Render::InitScene(){
     {
         sc->addObject(new Object(sphere,shaders[0]));
         sc->addObject(new Object(sphere,shaders[0]));
-        sc->addObject(new Object(sphere,shaders[0]));
+        sc->addObject(new Object(sphere,shaders[3]));
         sc->addObject(new Object(sphere,shaders[0]));
 
         sc->addObject(new Object(plain,shaders[2]));
@@ -352,31 +349,31 @@ void Render::RenderView() {
 
     // Sets the key callback
     glfwSetKeyCallback(window, key_callback);
-
     glfwSetCursorPosCallback(window, cursor_callback);
-
     glfwSetMouseButtonCallback(window, button_callback);
-
     glfwSetWindowFocusCallback(window, window_focus_callback);
-
     glfwSetWindowIconifyCallback(window, window_iconify_callback);
-
     glfwSetWindowSizeCallback(window, window_size_callback);
 
     LoadTextures();     // Nahrání textur
 
+    Camera* cam = generateCamera(); // Vygenerování kamery
 
-    Camera* cam = generateCamera();
+    Shader* sh = generateShader(1,  cam, "../Shaders/shader1.vs", "../Shaders/shader1.fs");  // Normální model
 
-    Shader* sh = generateShader(1,  cam);  // Normální model
+    //sh = loadShader("/Shaders/shader1.vs", "/Shaders/shader1.fs")
     shaders.push_back(sh);
 
     sh = NULL;
-    sh = generateShader(2, cam);        // Texturovaný model - texturovací jednotka 0;
+    sh = generateShader(2, cam, "../Shaders/shader2.vs", "../Shaders/shader2.fs");        // Texturovaný model - texturovací jednotka 0;
     shaders.push_back(sh);
 
     sh = NULL;
-    sh = generateShader(3, cam);        // Texturovaný model - texturovací jednotka 1
+    sh = generateShader(3, cam, "../Shaders/shader2.vs", "../Shaders/shader2.fs");        // Texturovaný model - texturovací jednotka 1
+    shaders.push_back(sh);
+
+    sh = NULL;
+    sh = generateShader(1, cam, "../Shaders/shader3.vs", "../Shaders/shader3.fs");        // Normálmní model - červený
     shaders.push_back(sh);
 
     InitScene();        //Inicializace scény

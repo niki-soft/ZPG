@@ -8,11 +8,11 @@
 Object::Object(std::vector<float> pnts, Shader* sh) {
 
     if (sh->type == 1){
-        this->model = new Model(pnts, 1);
+        this->model = new Model(pnts);
     }
 
-    if (sh->type > 1){
-        this->model = new Model(pnts, 2);
+    if (sh->type == 2 || sh->type == 3) {
+        this->model = new TexturedModel(pnts);
     }
 
     this->shader = sh;

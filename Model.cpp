@@ -5,13 +5,10 @@
 #include "Model.h"
 #include <iostream>
 
-Model::Model(std::vector<float> pnts, int typ) {
+Model::Model(std::vector<float> pnts) {
 
 
-    if (typ == 1)
-        number = 6;
-    if (typ>1)
-        number = 8;
+    number = 6;
 
     points = new float[pnts.size()];
     std::copy(pnts.begin(), pnts.end(), points);
@@ -34,17 +31,18 @@ void Model::initialize() {
 
     glEnableVertexAttribArray(0); //enable vertex attributes
     glEnableVertexAttribArray(1); //normal atribute
-
+/*
     if (number > 6)
         glEnableVertexAttribArray(2); //texture atribute
-
+*/
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
 
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, number * sizeof(GL_FLOAT), (GLvoid*)0);
     glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, number * sizeof(GL_FLOAT), (GLvoid*)(3 * sizeof(GL_FLOAT)));
-
+/*
     if (number > 6)
         glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(GL_FLOAT), (GLvoid*)(6 * sizeof(GL_FLOAT)));
+*/
     //std::cout << "Inicializace Model konec" << std::endl;
 }
 

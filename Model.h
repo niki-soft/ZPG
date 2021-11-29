@@ -33,7 +33,7 @@ protected:
     int number;
 
 public:
-    Model(std::vector<float> pnts, int typ);
+    Model(std::vector<float> pnts);
     void setVAO();
     int numberOfTriangles();
     void initialize();

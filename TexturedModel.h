@@ -19,14 +19,8 @@
 
 class TexturedModel : public Model {
 
-private:
-    GLuint VAO;
-    GLuint VBO;
-    int triangle_count;
-    float *points;
-    int number;
 public:
-    TexturedModel(std::vector<float>, int typ);
+    TexturedModel(std::vector<float>);
     void initialize();
 
 };
