@@ -57,10 +57,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/jenda/CLionProjects/zpg-game
+CMAKE_SOURCE_DIR = /Users/jenda/CLionProjects/zpg-game2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/jenda/CLionProjects/zpg-game/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/jenda/CLionProjects/zpg-game2/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jenda/CLionProjects/zpg-game/cmake-build-debug/CMakeFiles /Users/jenda/CLionProjects/zpg-game/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/CMakeFiles /Users/jenda/CLionProjects/zpg-game2/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jenda/CLionProjects/zpg-game/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -128,6 +128,19 @@ zpg-game: cmake_check_build_system
 zpg-game/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/zpg-game.dir/build.make CMakeFiles/zpg-game.dir/build
 .PHONY : zpg-game/fast
+
+#=============================================================================
+# Target rules for targets named SOIL_STATIC
+
+# Build rule for target.
+SOIL_STATIC: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SOIL_STATIC
+.PHONY : SOIL_STATIC
+
+# fast build rule for target.
+SOIL_STATIC/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SOIL_STATIC.dir/build.make CMakeFiles/SOIL_STATIC.dir/build
+.PHONY : SOIL_STATIC/fast
 
 Camera.o: Camera.cpp.o
 .PHONY : Camera.o
@@ -321,6 +334,30 @@ Storage.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/zpg-game.dir/build.make CMakeFiles/zpg-game.dir/Storage.cpp.s
 .PHONY : Storage.cpp.s
 
+TexturedModel.o: TexturedModel.cpp.o
+.PHONY : TexturedModel.o
+
+# target to build an object file
+TexturedModel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/zpg-game.dir/build.make CMakeFiles/zpg-game.dir/TexturedModel.cpp.o
+.PHONY : TexturedModel.cpp.o
+
+TexturedModel.i: TexturedModel.cpp.i
+.PHONY : TexturedModel.i
+
+# target to preprocess a source file
+TexturedModel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/zpg-game.dir/build.make CMakeFiles/zpg-game.dir/TexturedModel.cpp.i
+.PHONY : TexturedModel.cpp.i
+
+TexturedModel.s: TexturedModel.cpp.s
+.PHONY : TexturedModel.s
+
+# target to generate assembly for a file
+TexturedModel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/zpg-game.dir/build.make CMakeFiles/zpg-game.dir/TexturedModel.cpp.s
+.PHONY : TexturedModel.cpp.s
+
 Transform.o: Transform.cpp.o
 .PHONY : Transform.o
 
@@ -344,6 +381,102 @@ Transform.s: Transform.cpp.s
 Transform.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/zpg-game.dir/build.make CMakeFiles/zpg-game.dir/Transform.cpp.s
 .PHONY : Transform.cpp.s
+
+Users/jenda/Documents/GitHub/soil/libSOIL/SOIL.o: Users/jenda/Documents/GitHub/soil/libSOIL/SOIL.c.o
+.PHONY : Users/jenda/Documents/GitHub/soil/libSOIL/SOIL.o
+
+# target to build an object file
+Users/jenda/Documents/GitHub/soil/libSOIL/SOIL.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SOIL_STATIC.dir/build.make CMakeFiles/SOIL_STATIC.dir/Users/jenda/Documents/GitHub/soil/libSOIL/SOIL.c.o
+.PHONY : Users/jenda/Documents/GitHub/soil/libSOIL/SOIL.c.o
+
+Users/jenda/Documents/GitHub/soil/libSOIL/SOIL.i: Users/jenda/Documents/GitHub/soil/libSOIL/SOIL.c.i
+.PHONY : Users/jenda/Documents/GitHub/soil/libSOIL/SOIL.i
+
+# target to preprocess a source file
+Users/jenda/Documents/GitHub/soil/libSOIL/SOIL.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SOIL_STATIC.dir/build.make CMakeFiles/SOIL_STATIC.dir/Users/jenda/Documents/GitHub/soil/libSOIL/SOIL.c.i
+.PHONY : Users/jenda/Documents/GitHub/soil/libSOIL/SOIL.c.i
+
+Users/jenda/Documents/GitHub/soil/libSOIL/SOIL.s: Users/jenda/Documents/GitHub/soil/libSOIL/SOIL.c.s
+.PHONY : Users/jenda/Documents/GitHub/soil/libSOIL/SOIL.s
+
+# target to generate assembly for a file
+Users/jenda/Documents/GitHub/soil/libSOIL/SOIL.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SOIL_STATIC.dir/build.make CMakeFiles/SOIL_STATIC.dir/Users/jenda/Documents/GitHub/soil/libSOIL/SOIL.c.s
+.PHONY : Users/jenda/Documents/GitHub/soil/libSOIL/SOIL.c.s
+
+Users/jenda/Documents/GitHub/soil/libSOIL/image_DXT.o: Users/jenda/Documents/GitHub/soil/libSOIL/image_DXT.c.o
+.PHONY : Users/jenda/Documents/GitHub/soil/libSOIL/image_DXT.o
+
+# target to build an object file
+Users/jenda/Documents/GitHub/soil/libSOIL/image_DXT.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SOIL_STATIC.dir/build.make CMakeFiles/SOIL_STATIC.dir/Users/jenda/Documents/GitHub/soil/libSOIL/image_DXT.c.o
+.PHONY : Users/jenda/Documents/GitHub/soil/libSOIL/image_DXT.c.o
+
+Users/jenda/Documents/GitHub/soil/libSOIL/image_DXT.i: Users/jenda/Documents/GitHub/soil/libSOIL/image_DXT.c.i
+.PHONY : Users/jenda/Documents/GitHub/soil/libSOIL/image_DXT.i
+
+# target to preprocess a source file
+Users/jenda/Documents/GitHub/soil/libSOIL/image_DXT.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SOIL_STATIC.dir/build.make CMakeFiles/SOIL_STATIC.dir/Users/jenda/Documents/GitHub/soil/libSOIL/image_DXT.c.i
+.PHONY : Users/jenda/Documents/GitHub/soil/libSOIL/image_DXT.c.i
+
+Users/jenda/Documents/GitHub/soil/libSOIL/image_DXT.s: Users/jenda/Documents/GitHub/soil/libSOIL/image_DXT.c.s
+.PHONY : Users/jenda/Documents/GitHub/soil/libSOIL/image_DXT.s
+
+# target to generate assembly for a file
+Users/jenda/Documents/GitHub/soil/libSOIL/image_DXT.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SOIL_STATIC.dir/build.make CMakeFiles/SOIL_STATIC.dir/Users/jenda/Documents/GitHub/soil/libSOIL/image_DXT.c.s
+.PHONY : Users/jenda/Documents/GitHub/soil/libSOIL/image_DXT.c.s
+
+Users/jenda/Documents/GitHub/soil/libSOIL/image_helper.o: Users/jenda/Documents/GitHub/soil/libSOIL/image_helper.c.o
+.PHONY : Users/jenda/Documents/GitHub/soil/libSOIL/image_helper.o
+
+# target to build an object file
+Users/jenda/Documents/GitHub/soil/libSOIL/image_helper.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SOIL_STATIC.dir/build.make CMakeFiles/SOIL_STATIC.dir/Users/jenda/Documents/GitHub/soil/libSOIL/image_helper.c.o
+.PHONY : Users/jenda/Documents/GitHub/soil/libSOIL/image_helper.c.o
+
+Users/jenda/Documents/GitHub/soil/libSOIL/image_helper.i: Users/jenda/Documents/GitHub/soil/libSOIL/image_helper.c.i
+.PHONY : Users/jenda/Documents/GitHub/soil/libSOIL/image_helper.i
+
+# target to preprocess a source file
+Users/jenda/Documents/GitHub/soil/libSOIL/image_helper.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SOIL_STATIC.dir/build.make CMakeFiles/SOIL_STATIC.dir/Users/jenda/Documents/GitHub/soil/libSOIL/image_helper.c.i
+.PHONY : Users/jenda/Documents/GitHub/soil/libSOIL/image_helper.c.i
+
+Users/jenda/Documents/GitHub/soil/libSOIL/image_helper.s: Users/jenda/Documents/GitHub/soil/libSOIL/image_helper.c.s
+.PHONY : Users/jenda/Documents/GitHub/soil/libSOIL/image_helper.s
+
+# target to generate assembly for a file
+Users/jenda/Documents/GitHub/soil/libSOIL/image_helper.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SOIL_STATIC.dir/build.make CMakeFiles/SOIL_STATIC.dir/Users/jenda/Documents/GitHub/soil/libSOIL/image_helper.c.s
+.PHONY : Users/jenda/Documents/GitHub/soil/libSOIL/image_helper.c.s
+
+Users/jenda/Documents/GitHub/soil/libSOIL/stb_image_aug.o: Users/jenda/Documents/GitHub/soil/libSOIL/stb_image_aug.c.o
+.PHONY : Users/jenda/Documents/GitHub/soil/libSOIL/stb_image_aug.o
+
+# target to build an object file
+Users/jenda/Documents/GitHub/soil/libSOIL/stb_image_aug.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SOIL_STATIC.dir/build.make CMakeFiles/SOIL_STATIC.dir/Users/jenda/Documents/GitHub/soil/libSOIL/stb_image_aug.c.o
+.PHONY : Users/jenda/Documents/GitHub/soil/libSOIL/stb_image_aug.c.o
+
+Users/jenda/Documents/GitHub/soil/libSOIL/stb_image_aug.i: Users/jenda/Documents/GitHub/soil/libSOIL/stb_image_aug.c.i
+.PHONY : Users/jenda/Documents/GitHub/soil/libSOIL/stb_image_aug.i
+
+# target to preprocess a source file
+Users/jenda/Documents/GitHub/soil/libSOIL/stb_image_aug.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SOIL_STATIC.dir/build.make CMakeFiles/SOIL_STATIC.dir/Users/jenda/Documents/GitHub/soil/libSOIL/stb_image_aug.c.i
+.PHONY : Users/jenda/Documents/GitHub/soil/libSOIL/stb_image_aug.c.i
+
+Users/jenda/Documents/GitHub/soil/libSOIL/stb_image_aug.s: Users/jenda/Documents/GitHub/soil/libSOIL/stb_image_aug.c.s
+.PHONY : Users/jenda/Documents/GitHub/soil/libSOIL/stb_image_aug.s
+
+# target to generate assembly for a file
+Users/jenda/Documents/GitHub/soil/libSOIL/stb_image_aug.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SOIL_STATIC.dir/build.make CMakeFiles/SOIL_STATIC.dir/Users/jenda/Documents/GitHub/soil/libSOIL/stb_image_aug.c.s
+.PHONY : Users/jenda/Documents/GitHub/soil/libSOIL/stb_image_aug.c.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -377,6 +510,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... SOIL_STATIC"
 	@echo "... zpg-game"
 	@echo "... Camera.o"
 	@echo "... Camera.i"
@@ -402,9 +536,24 @@ help:
 	@echo "... Storage.o"
 	@echo "... Storage.i"
 	@echo "... Storage.s"
+	@echo "... TexturedModel.o"
+	@echo "... TexturedModel.i"
+	@echo "... TexturedModel.s"
 	@echo "... Transform.o"
 	@echo "... Transform.i"
 	@echo "... Transform.s"
+	@echo "... Users/jenda/Documents/GitHub/soil/libSOIL/SOIL.o"
+	@echo "... Users/jenda/Documents/GitHub/soil/libSOIL/SOIL.i"
+	@echo "... Users/jenda/Documents/GitHub/soil/libSOIL/SOIL.s"
+	@echo "... Users/jenda/Documents/GitHub/soil/libSOIL/image_DXT.o"
+	@echo "... Users/jenda/Documents/GitHub/soil/libSOIL/image_DXT.i"
+	@echo "... Users/jenda/Documents/GitHub/soil/libSOIL/image_DXT.s"
+	@echo "... Users/jenda/Documents/GitHub/soil/libSOIL/image_helper.o"
+	@echo "... Users/jenda/Documents/GitHub/soil/libSOIL/image_helper.i"
+	@echo "... Users/jenda/Documents/GitHub/soil/libSOIL/image_helper.s"
+	@echo "... Users/jenda/Documents/GitHub/soil/libSOIL/stb_image_aug.o"
+	@echo "... Users/jenda/Documents/GitHub/soil/libSOIL/stb_image_aug.i"
+	@echo "... Users/jenda/Documents/GitHub/soil/libSOIL/stb_image_aug.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

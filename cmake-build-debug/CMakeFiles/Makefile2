@@ -54,16 +54,17 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/jenda/CLionProjects/zpg-game
+CMAKE_SOURCE_DIR = /Users/jenda/CLionProjects/zpg-game2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/jenda/CLionProjects/zpg-game/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/jenda/CLionProjects/zpg-game2/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
 all: CMakeFiles/zpg-game.dir/all
+all: CMakeFiles/SOIL_STATIC.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -72,6 +73,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/zpg-game.dir/clean
+clean: CMakeFiles/SOIL_STATIC.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -81,14 +83,14 @@ clean: CMakeFiles/zpg-game.dir/clean
 CMakeFiles/zpg-game.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/zpg-game.dir/build.make CMakeFiles/zpg-game.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/zpg-game.dir/build.make CMakeFiles/zpg-game.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target zpg-game"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/CMakeFiles --progress-num=6,7,8,9,10,11,12,13,14,15,16,17 "Built target zpg-game"
 .PHONY : CMakeFiles/zpg-game.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/zpg-game.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jenda/CLionProjects/zpg-game/cmake-build-debug/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/zpg-game.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jenda/CLionProjects/zpg-game/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/zpg-game.dir/rule
 
 # Convenience name for target.
@@ -99,6 +101,32 @@ zpg-game: CMakeFiles/zpg-game.dir/rule
 CMakeFiles/zpg-game.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/zpg-game.dir/build.make CMakeFiles/zpg-game.dir/clean
 .PHONY : CMakeFiles/zpg-game.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/SOIL_STATIC.dir
+
+# All Build rule for target.
+CMakeFiles/SOIL_STATIC.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SOIL_STATIC.dir/build.make CMakeFiles/SOIL_STATIC.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SOIL_STATIC.dir/build.make CMakeFiles/SOIL_STATIC.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5 "Built target SOIL_STATIC"
+.PHONY : CMakeFiles/SOIL_STATIC.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/SOIL_STATIC.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SOIL_STATIC.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/SOIL_STATIC.dir/rule
+
+# Convenience name for target.
+SOIL_STATIC: CMakeFiles/SOIL_STATIC.dir/rule
+.PHONY : SOIL_STATIC
+
+# clean rule for target.
+CMakeFiles/SOIL_STATIC.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SOIL_STATIC.dir/build.make CMakeFiles/SOIL_STATIC.dir/clean
+.PHONY : CMakeFiles/SOIL_STATIC.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

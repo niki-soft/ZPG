@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/g++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/local/Cellar/glew/2.2.0_1/include/GL -I/usr/local/Cellar/glfw/3.3.4/include/GLFW -I/usr/local/Cellar/glm/0.9.9.8/include/glm/glm.hpp -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks
+CXX_INCLUDES = -I/usr/local/Cellar/glew/2.2.0_1/include/GL -I/usr/local/Cellar/glfw/3.3.4/include/GLFW -I/usr/local/Cellar/glm/0.9.9.8/include/glm/glm.hpp -I/Users/jenda/Documents/GitHub/soil/libSOIL/SOIL.h -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk/System/Library/Frameworks -isystem /usr/local/Cellar/opencv/4.5.3_3/include/opencv4
 
-CXX_FLAGS = -g -std=gnu++14
+CXX_FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -std=gnu++14
 

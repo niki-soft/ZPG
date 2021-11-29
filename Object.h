@@ -6,6 +6,7 @@
 #define ZPG_TEST_OBJECT_H
 
 #include "Model.h"
+#include "TexturedModel.h"
 #include "Transform.h"
 #include "Shader.h"
 #include "Camera.h"
@@ -18,12 +19,13 @@ private:
     Shader *shader;
 
 public:
-    Object(std::vector<float> pnts);
+    Object(std::vector<float> pnts, Shader* sh);
+
     void Draw(keyPress *keyScan);
     void addTransform(transStruct t);
     void removeTransform (transStruct t);
     void calculateTransform();
+    float getZetPosition();
 };
-
 
 #endif //ZPG_TEST_OBJECT_H

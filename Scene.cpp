@@ -12,7 +12,7 @@ void Scene::addObject(Object *obj) {
     this->storage->addObject(obj);
 }
 
-void Scene::remoceObject(int number) {
+void Scene::removeObject(int number) {
     this->storage->removeObject(number);
 }
 

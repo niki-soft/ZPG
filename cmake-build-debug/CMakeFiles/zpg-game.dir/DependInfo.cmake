@@ -8,16 +8,17 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/jenda/CLionProjects/zpg-game/Camera.cpp" "/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/CMakeFiles/zpg-game.dir/Camera.cpp.o"
-  "/Users/jenda/CLionProjects/zpg-game/Model.cpp" "/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/CMakeFiles/zpg-game.dir/Model.cpp.o"
-  "/Users/jenda/CLionProjects/zpg-game/Object.cpp" "/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/CMakeFiles/zpg-game.dir/Object.cpp.o"
-  "/Users/jenda/CLionProjects/zpg-game/ObjectFactory.cpp" "/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/CMakeFiles/zpg-game.dir/ObjectFactory.cpp.o"
-  "/Users/jenda/CLionProjects/zpg-game/Render.cpp" "/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/CMakeFiles/zpg-game.dir/Render.cpp.o"
-  "/Users/jenda/CLionProjects/zpg-game/Scene.cpp" "/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/CMakeFiles/zpg-game.dir/Scene.cpp.o"
-  "/Users/jenda/CLionProjects/zpg-game/Shader.cpp" "/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/CMakeFiles/zpg-game.dir/Shader.cpp.o"
-  "/Users/jenda/CLionProjects/zpg-game/Storage.cpp" "/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/CMakeFiles/zpg-game.dir/Storage.cpp.o"
-  "/Users/jenda/CLionProjects/zpg-game/Transform.cpp" "/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/CMakeFiles/zpg-game.dir/Transform.cpp.o"
-  "/Users/jenda/CLionProjects/zpg-game/main.cpp" "/Users/jenda/CLionProjects/zpg-game/cmake-build-debug/CMakeFiles/zpg-game.dir/main.cpp.o"
+  "/Users/jenda/CLionProjects/zpg-game2/Camera.cpp" "/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/CMakeFiles/zpg-game.dir/Camera.cpp.o"
+  "/Users/jenda/CLionProjects/zpg-game2/Model.cpp" "/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/CMakeFiles/zpg-game.dir/Model.cpp.o"
+  "/Users/jenda/CLionProjects/zpg-game2/Object.cpp" "/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/CMakeFiles/zpg-game.dir/Object.cpp.o"
+  "/Users/jenda/CLionProjects/zpg-game2/ObjectFactory.cpp" "/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/CMakeFiles/zpg-game.dir/ObjectFactory.cpp.o"
+  "/Users/jenda/CLionProjects/zpg-game2/Render.cpp" "/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/CMakeFiles/zpg-game.dir/Render.cpp.o"
+  "/Users/jenda/CLionProjects/zpg-game2/Scene.cpp" "/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/CMakeFiles/zpg-game.dir/Scene.cpp.o"
+  "/Users/jenda/CLionProjects/zpg-game2/Shader.cpp" "/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/CMakeFiles/zpg-game.dir/Shader.cpp.o"
+  "/Users/jenda/CLionProjects/zpg-game2/Storage.cpp" "/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/CMakeFiles/zpg-game.dir/Storage.cpp.o"
+  "/Users/jenda/CLionProjects/zpg-game2/TexturedModel.cpp" "/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/CMakeFiles/zpg-game.dir/TexturedModel.cpp.o"
+  "/Users/jenda/CLionProjects/zpg-game2/Transform.cpp" "/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/CMakeFiles/zpg-game.dir/Transform.cpp.o"
+  "/Users/jenda/CLionProjects/zpg-game2/main.cpp" "/Users/jenda/CLionProjects/zpg-game2/cmake-build-debug/CMakeFiles/zpg-game.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
@@ -26,7 +27,9 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/local/Cellar/glew/2.2.0_1/include/GL"
   "/usr/local/Cellar/glfw/3.3.4/include/GLFW"
   "/usr/local/Cellar/glm/0.9.9.8/include/glm/glm.hpp"
-  "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/OpenGL.framework"
+  "/Users/jenda/Documents/GitHub/soil/libSOIL/SOIL.h"
+  "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk/System/Library/Frameworks/OpenGL.framework"
+  "/usr/local/Cellar/opencv/4.5.3_3/include/opencv4"
   )
 
 # The set of dependency files which are needed:

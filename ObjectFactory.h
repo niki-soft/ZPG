@@ -6,15 +6,11 @@
 #define ZPG_GAME_OBJECTFACTORY_H
 
 #include "Model.h"
+#include "Camera.h"
+#include "Shader.h"
 #include <vector>
 
 class ObjectFactory {
-private:
-    std::vector<float> points;
-public:
-    ObjectFactory();
-    Model* MakeModel(char** m);
-
 };
 
 

@@ -4,14 +4,15 @@
 
 #include "Camera.h"
 #include "Shader.h"
+#include <iostream>
 
 
-Camera::Camera(Shader *shader, int width, int height, glm::vec3 position) {
+Camera::Camera(int width, int height, glm::vec3 position) {
 
     Camera::width = width;
     Camera::height = height;
     Camera::Position = position;
-    Camera::shaders.push_back(shader);
+    //Camera::shaders.push_back(shader);
     Camera::Matrix(45.0f, 0.01f, 100.0f);
 
 }
@@ -86,6 +87,74 @@ void Camera::Inputs(keyPress *keyScan) {
     {
         speed = 0.1f;
         change = true;
+    }
+
+    if (keyScan->but_action == 0)
+    {
+        firstMouse = true;
+        lastX = keyScan->x;
+        lastY = keyScan->y;
+    }
+
+ /*
+    if (keyScan->but_action == 1 && keyScan->button == 1)
+    {
+
+        const float radius = 10.0f;
+        Orientation.x += sin(glfwGetTime()) * radius;
+        Orientation.z += cos(glfwGetTime()) * radius;
+
+        //std::cout << "Rotace" << " " << camX << "," << camZ << std::endl;
+
+        //Orientation = glm::vec3(camX,0.0, camZ);
+        //Orientation = glm::vec3(0.0, 0.0, 0.0);
+        this->view = glm::lookAt(Position, Position + Orientation, Up);
+    }
+*/
+
+
+    if (keyScan->but_action == 1 && keyScan->button == 1)
+    {
+        if (firstMouse)
+        {
+            lastX = keyScan->x;
+            lastY = keyScan->y;
+            firstMouse = false;
+        }
+
+        if (lastX == 0)
+        {
+            lastX = keyScan->x;
+            lastY = keyScan->y;
+        }
+
+        float xoffset = keyScan->x - lastX;
+        float yoffset = lastY - keyScan->y;
+
+        lastX = keyScan->x;
+        lastY = keyScan->y;
+        xoffset *= 0.5f;
+        yoffset *= 0.5f;
+
+
+        yaw += xoffset;
+        pitch += yoffset;
+
+        if(pitch > 89.0f)
+            pitch = 89.0f;
+        if(pitch < -89.0f)
+            pitch = -89.0f;
+
+
+        //std::cout << pitch << "," << yaw << std::endl;
+
+        glm::vec3 direction;
+        direction.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
+        direction.y = sin(glm::radians(pitch));
+        direction.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
+        Orientation = glm::normalize(direction);
+
+        this->view = glm::lookAt(Position, Position + Orientation, Up);
     }
 
     if (change)

@@ -17,7 +17,9 @@
 #include </usr/local/Cellar/glm/0.9.9.8/include/glm/gtc/type_ptr.hpp> // glm::value_ptr
 
 // Include SOIL
-#include "/usr/local/include/SOIL/SOIL.h"
+//#include "/opt/local/include/SOIL/SOIL.h"
+// Include OpenCV
+//#include </usr/local/Cellar/opencv/4.5.3_3/include/opencv4/opencv2/opencv.hpp>
 
 //Include the standard C++ headers
 #include <stdlib.h>
@@ -25,6 +27,7 @@
 #include "Storage.h"
 #include <vector>
 #include "Scene.h"
+#include "ObjectFactory.h"
 
 class Render
 {
@@ -44,18 +47,23 @@ private:
 
     void GLMtest();
 
-    void InitScene1(Scene *sc);
-    void InitScene2(Scene *sc);
-    void InitScene3(Scene *sc);
+    void InitScene();
 
     static Render* instance;
+
+    void LoadTextures();
+    Camera* generateCamera();
+    Shader* generateShader(int type, Camera* cam);
 
     Render();
 
 public:
-
+    std::vector<Scene*> scenes;
+    std::vector<Shader*> shaders;
     static Render* getInstance();
+    void CreateNewObject(Shader* sh);
     void RenderView();
+
 };
 
 

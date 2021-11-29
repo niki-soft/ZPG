@@ -5,82 +5,94 @@
 #include "Shader.h"
 #include "Camera.h"
 #include <iostream>
-Shader::Shader(Camera *cam) {
+Shader::Shader(int typ, Camera *cam) {
 
     this->camera = cam;
+    this->type = typ;
+    if (this->type == 1) {
+        this->vertex_shader =
+                "#version 400\n"
+                "layout(location=0) in vec3 vp;"
+                "layout(location=1) in vec3 normal;"
+                "uniform mat4 ModelMatrix;"
+                "uniform mat4 ProjectionMatrix;"
+                "uniform mat4 ViewMatrix;"
+                "out vec3 Normals;"
+                "out vec3 FragPos;"
+                "void main () {"
+                "     gl_Position = ProjectionMatrix * ViewMatrix * ModelMatrix * vec4 (vp, 1.0);"
+                "     vec4 a = ModelMatrix * vec4(vp, 1.0f);"
+                "     FragPos = a.xyz / a.w;"
+                "     Normals = transpose(inverse(mat3(ModelMatrix))) * normal;"
+                "}";
 
-    this->vertex_shader =
-            "#version 400\n"
-            "layout(location=0) in vec3 vp;"
-            "layout(location=1) in vec3 normal;"
-            "uniform mat4 ModelMatrix;"
-            "uniform mat4 ProjectionMatrix;"
-            "uniform mat4 ViewMatrix;"
-            "out vec3 Normals;"
-            "out vec3 FragPos;"
-            "void main () {"
-            "     gl_Position = ProjectionMatrix * ViewMatrix * ModelMatrix * vec4 (vp, 1.0);"
-            "     vec4 a = ModelMatrix * vec4(vp, 1.0f);"
-            "     FragPos = a.xyz / a.w;"
-            "     Normals = transpose(inverse(mat3(ModelMatrix))) * normal;"
-            "}";
+        this->fragment_shader =
+                "#version 400\n"
+                "in vec3 Normals;"
+                "in vec3 FragPos;"
+                "uniform vec3 CamPosition;"
+                "out vec4 FragColor;"
 
-    this->fragment_shader =
-            "#version 400\n"
-            "in vec3 Normals;"
-            "in vec3 FragPos;"
-            "uniform vec3 CamPosition;"
-            "out vec4 FragColor;"
+                "void main () {"
+                "   vec3 lightPos = vec3(0.0f, 0.0f, 0.0f);"
+                "   vec3 lightVector = lightPos - FragPos;"
+                "   float dot_product = max(dot(normalize(lightVector), normalize(Normals)), 0.0);"
+                "   vec4 diffuse = dot_product * vec4(0.385f, 0.647f, 0.812f, 1.0f);"
+                "   vec4 ambient = vec4(0.1, 0.1, 0.1, 1.0);"
+                "   float specularStrength = 0.75;"
+                "   vec3 viewDir = normalize(CamPosition - FragPos);"
+                "   vec3 reflectDir = reflect(-lightVector, Normals);"
+                "   float spec = pow(max(dot(normalize(viewDir), normalize(reflectDir)), 0.0), 16);"
+                "   vec3 specular = specularStrength * spec * vec3(1.0f, 1.0f, 1.0f);"
+                "   FragColor = ambient+diffuse + vec4(specular, 1.0f);"
+                "}";
+    }
 
-            "void main () {"
-            "   vec3 lightPos = vec3(0.0f, 0.0f, 0.0f);"
-            "   vec3 lightVector = lightPos - FragPos;"
-            "   float dot_product = max(dot(normalize(lightVector), normalize(Normals)), 0.0);"
-            "   vec4 diffuse = dot_product * vec4(0.385f, 0.647f, 0.812f, 1.0f);"
-            "   vec4 ambient = vec4(0.1, 0.1, 0.1, 1.0);"
-            "   float specularStrength = 0.75;"
-            "   vec3 viewDir = normalize(CamPosition - FragPos);"
-            "   vec3 reflectDir = reflect(-lightVector, Normals);"
-            "   float spec = pow(max(dot(normalize(viewDir), normalize(reflectDir)), 0.0), 16);"
-            "   vec3 specular = specularStrength * spec * vec3(1.0f, 1.0f, 1.0f);"
-            "   FragColor = ambient+diffuse + vec4(specular, 1.0f);"
-            "}";
+    if (this->type >= 2) {
+        this->vertex_shader =
+                "#version 400\n"
+                "layout(location=0) in vec3 vp;"
+                "layout(location=1) in vec3 normal;"
+                "layout(location=2) in vec2 aTexCoord;"
+                "uniform mat4 ModelMatrix;"
+                "uniform mat4 ProjectionMatrix;"
+                "uniform mat4 ViewMatrix;"
+                "out vec3 Normals;"
+                "out vec3 FragPos;"
+                "out vec2 TexCoord;"
+                "void main () {"
+                "     gl_Position = ProjectionMatrix * ViewMatrix * ModelMatrix * vec4 (vp, 1.0);"
+                "     vec4 a = ModelMatrix * vec4(vp, 1.0f);"
+                "     FragPos = a.xyz / a.w;"
+                "     Normals = transpose(inverse(mat3(ModelMatrix))) * normal;"
+                "     TexCoord = aTexCoord;"
+                "}";
 
-            compileShader();
-    /*
-            "//uniform sampler2D textureUnitID;"
-            "//in vec2 uv;"
-            "   //FragColor = texture(textureUnitID, uv);"
+        this->fragment_shader =
+                "#version 400\n"
+                "in vec3 Normals;"
+                "in vec3 FragPos;"
+                "uniform vec3 CamPosition;"
+                "out vec4 FragColor;"
+                "uniform sampler2D textureUnitID;"
+                "in vec2 TexCoord;"
+                "void main () {"
+                "   vec3 lightPos = vec3(0.0f, 20.0f, 20.0f);"
+                "   vec3 lightVector = lightPos - FragPos;"
+                "   float dot_product = max(dot(normalize(lightVector), normalize(Normals)), 0.0);"
+                "   vec4 diffuse = dot_product * vec4(0.385f, 0.647f, 0.812f, 1.0f);"
+                "   vec4 ambient = vec4(0.1, 0.1, 0.1, 1.0);"
+                "   float specularStrength = 0.75;"
+                "   vec3 viewDir = normalize(CamPosition - FragPos);"
+                "   vec3 reflectDir = reflect(-lightVector, Normals);"
+                "   float spec = pow(max(dot(normalize(viewDir), normalize(reflectDir)), 0.0), 16);"
+                "   vec3 specular = specularStrength * spec * vec3(1.0f, 1.0f, 1.0f);"
+                "   FragColor = ambient+diffuse + vec4(specular, 1.0f);"
+                "   FragColor = texture(textureUnitID, TexCoord);"
+                "}";
+    }
+    compileShader();
 
-            "   FragColor = vec4(uv, 1.0, 1.0);"
-            "   FragColor = texture(textureUnitID,uv);"
-
-     this->vertex_shader =
-            "#version 330\n"
-            "layout(location=0) in vec3 vp;"
-            "layout(location=1) in vec3 normal;"
-            "uniform mat4 ModelMatrix;"
-            "uniform mat4 CameraMatrix;"
-            "out vec3 Normals;"
-            "out vec4 FragPosition;"
-            "void main () {"
-            "     gl_Position = CameraMatrix * ModelMatrix * vec4 (vp, 1.0);"
-            "     Normals=normal;"
-            "     FragPosition = ModelMatrix * vec4(vp, 1.0);"
-            "}";
-
-    this->fragment_shader =
-            "#version 330\n"
-            "out vec4 frag_colour;"
-            "in vec3 Normals;"
-            "in vec3 FragPosition;"
-
-            "void main () {"
-            "float amb = 0.1;"
-            "     frag_colour = amb * vec4(Normals, 1.0f);"
-            "}";
-
-*/
 }
 void Shader::compileShader() {
     vertexShader = glCreateShader(GL_VERTEX_SHADER);
@@ -101,31 +113,11 @@ void Shader::compileShader() {
     ViewMatrix = glGetUniformLocation(shaderProgram, "ViewMatrix");
     CamPos = glGetUniformLocation(shaderProgram, "CamPosition");
 
+    if (this->type >= 2)
+        uniformID = glGetUniformLocation(shaderProgram, "textureUnitID");
+
 }
 void Shader::setShader(glm::mat4 M) {
-
-    // Bind first texture to first texture unit
-    //glActiveTexture specifies which texture unit to make active
-
-    //glActiveTexture(GL_TEXTURE0);
-
-    //Load texture and generate TextureID
-    //GLuint textureID = SOIL_load_OGL_texture("test.png",
-    //                                         SOIL_LOAD_RGBA,
-    //                                         SOIL_CREATE_NEW_ID,
-    //                                         SOIL_FLAG_INVERT_Y);
-/*
-    if (textureID == NULL) {
-        std::cout << "An error occurred while loading image." << std::endl;
-        exit(EXIT_FAILURE);
-    }
-*/
- //   glBindTexture(GL_TEXTURE_2D, textureID);
-
-    // Set texture unit to fragment shader
-
-//    GLint uniformID = glGetUniformLocation(shaderProgram, "textureUnitID");
-
 
     glUseProgram(shaderProgram);
     glUniformMatrix4fv(ModelTransform, 1, GL_FALSE, &M[0][0]);
@@ -133,5 +125,11 @@ void Shader::setShader(glm::mat4 M) {
     glUniformMatrix4fv(ViewMatrix, 1, GL_FALSE, glm::value_ptr(camera->view));
     glUniform3fv(CamPos, 1, &this->camera->Position[0]);
 
-//    glUniform1i(uniformID, 0); //texture unit 0
+    if (this->type == 2) {
+        glUniform1i(uniformID, 0); //texture unit 0
+        //std::cout << "Texture unit 0 set" << std::endl;
+    }
+
+    if (this->type == 3)
+        glUniform1i(uniformID, 1); //texture unit 1
 }

@@ -17,7 +17,7 @@
 #include </usr/local/Cellar/glm/0.9.9.8/include/glm/gtc/type_ptr.hpp> // glm::value_ptr
 
 // Include SOIL
-#include "/usr/local/include/SOIL/SOIL.h"
+//#include "/usr/local/include/SOIL/SOIL.h"
 
 class Camera;
 
@@ -34,16 +34,15 @@ private:
     GLint ProjectionMatrix;
     GLint ViewMatrix;
     GLint CamPos;
+    GLuint uniformID;
 
-private:
     void compileShader();
 
 public:
+    int type;
     Camera *camera;
-    Shader(Camera* camera);
+    Shader(int type, Camera* camera);
     void setShader(glm::mat4 M);
-
-
 };
 
 

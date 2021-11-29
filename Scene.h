@@ -14,7 +14,7 @@ private:
 public:
     Scene();
     void addObject(Object *obj);
-    void remoceObject(int number);
+    void removeObject(int number);
     Object* getObject(int number);
     int getNumberOfObjects();
 };

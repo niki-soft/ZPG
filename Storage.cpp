@@ -20,5 +20,5 @@ void Storage::removeObject(int number) {
     this->objects.erase(this->objects.begin()+number);
 }
 int Storage::getNumberOfObjects() {
-    return objects.size();
+    return this->objects.size();
 }

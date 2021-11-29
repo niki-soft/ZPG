@@ -26,13 +26,20 @@ struct keyPress{
     int scancode;
     int action;
     int mods;
+    int button;
+    int but_action;
+    int but_mode;
+    double x;
+    double y;
 };
-
 
 class Camera {
 
 private:
     std::vector<Shader*> shaders;
+    double x,y, lastX, lastY;
+    bool firstMouse = true;
+    float yaw, pitch;
 
 public:
     glm::mat4 view = glm::mat4(1.0f);
@@ -44,14 +51,14 @@ public:
     int height;
     void addShader(Shader* shader);
 
-    float speed = 0.1f;
+    float speed = 0.01f;
     float sensitivity = 100.0f;
 
     void Matrix(float FOVdeg, float nearPlane, float farPlane);
 
     void Inputs(keyPress *keyScan);
     void cameraChanged();
-    Camera(Shader *shader, int width, int height, glm::vec3 position );
+    Camera(int width, int height, glm::vec3 position );
 };
 
 

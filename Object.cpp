@@ -5,12 +5,18 @@
 #include "Object.h"
 #include "Camera.h"
 
-Object::Object(std::vector<float> pnts) {
+Object::Object(std::vector<float> pnts, Shader* sh) {
 
-    this->model = new Model(pnts);
-    this->shader = new Shader(new Camera(this->shader, 1366, 768, glm::vec3(0.0f, 0.0f, 5.0f)));
+    if (sh->type == 1){
+        this->model = new Model(pnts, 1);
+    }
+
+    if (sh->type > 1){
+        this->model = new Model(pnts, 2);
+    }
+
+    this->shader = sh;
     this->transform = new Transform();
-
 }
 
 void Object::Draw(keyPress *keyScan) {
@@ -33,4 +39,7 @@ void Object::removeTransform(transStruct t) {
 
 void Object::calculateTransform() {
     this->transform->calculateTransform();
+}
+float Object::getZetPosition() {
+    return this->transform->M[3][2];
 }
