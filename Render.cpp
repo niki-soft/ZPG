@@ -81,14 +81,18 @@ void Render::CreateNewObject(Shader* sh)
 
     sc = scenes[actuallyScene];
 
-    sc->addObject(new Object(c, sh));
+    sc->addObject(new Object(sphere, sh));
     glm::vec3 pos = sh->camera->Position;
     glm::vec3 ori = sh->camera->Orientation;
+
     sc->getObject(sc->getNumberOfObjects()-1)->addTransform({"translate", 1, pos});
     sc->getObject(sc->getNumberOfObjects()-1)->calculateTransform();
     sc->getObject(sc->getNumberOfObjects()-1)->removeTransform({"translate", 1, pos});
+    sc->getObject(sc->getNumberOfObjects()-1)->addTransform({"scale", 1, glm::vec3(0.25f, 0.25f, 0.25f)});
+    sc->getObject(sc->getNumberOfObjects()-1)->calculateTransform();
+    sc->getObject(sc->getNumberOfObjects()-1)->removeTransform({"scale", 1, glm::vec3(0.25f, 0.25f, 0.25f)});
     sc->getObject(sc->getNumberOfObjects()-1)->
-    addTransform({"translate", 1, glm::vec3(ori.x/5, ori.y/5, ori.z/5)});
+    addTransform({"translate", 1, glm::vec3(ori.x/1.0, ori.y/1.0, ori.z/1.0)});
 
     std::cout << "Nový objekt vygenerován" << std::endl;
 }
@@ -262,6 +266,8 @@ void Render::InitScene(){
        sc->addObject(new Object(plain,shaders[2]));
         sc->addObject(new Object(skydome,shaders[1]));
 
+        sc->addObject(new Object(sphere,shaders[4]));
+
         sc->getObject(0)->addTransform({"translate", 1,glm::vec3(-3, 0, 0)});
         sc->getObject(0)->calculateTransform();
 
@@ -286,6 +292,16 @@ void Render::InitScene(){
         sc->getObject(5)->addTransform({"scale", 1 ,glm::vec3(10.0f, 10.0f, 10.0f)});
         sc->getObject(5)->calculateTransform();
         sc->getObject(5)->removeTransform({"scale", 1, glm::vec3(10.0f, 10.0f, 10.0f)});
+
+        sc->getObject(6)->addTransform({"scale", 0.01 ,glm::vec3(0.1f, 0.1f, 0.1f)});
+        sc->getObject(6)->calculateTransform();
+        //sc->getObject(6)->removeTransform({"scale", 0.01 ,glm::vec3(0.2f, 0.2f, 0.2f)});
+
+        glm::vec3 campos = shaders[0]->camera->Position;
+
+        //sc->getObject(6)->addTransform({"translate", 1,glm::vec3(campos.x, campos.y, campos.z - 10)});
+        //sc->getObject(6)->calculateTransform();
+        //sc->getObject(6)->removeTransform({"translate", 1,glm::vec3(campos.x, campos.y, campos.z - 10)});
 
     }
     else if (actuallyScene == 2){
@@ -372,6 +388,10 @@ void Render::RenderView() {
     sh = new Shader(cam, "../Shaders/shader3.vs", "../Shaders/shader3.fs");        // Normálmní model - červený
     shaders.push_back(sh);
 
+    sh = NULL;
+    sh = new Shader(cam, "../Shaders/shader4.vs", "../Shaders/shader4.fs");        // Normálmní model - červený
+    shaders.push_back(sh);
+
     InitScene();        //Inicializace scény
 
     glEnable(GL_DEPTH_TEST);
@@ -394,6 +414,14 @@ void Render::RenderView() {
             firstclick = true;
             scenes[actuallyScene]->getObject(0)->changeShader(shaders[3]);
         }
+
+        glm::vec3 campos = glm::vec3(shaders[0]->camera->Position);
+        glm::vec3 camori = glm::vec3(shaders[0]->camera->Orientation);
+        //std::cout << "Pozice kamery: " << campos.x << "," << campos.y << "," << campos.z << std::endl;
+        scenes[actuallyScene]->getObject(6)->addTransform({"move", 1, campos + glm::vec3(camori.x * 0.5 ,camori.y*0.5  ,camori.z * 0.5)});
+        scenes[actuallyScene]->getObject(6)->addTransform({"scale", 0.01 ,glm::vec3(0.005f, 0.005f, 0.005f)});
+//        scenes[actuallyScene]->getObject(6)->calculateTransform();
+//       scenes[actuallyScene]->getObject(6)->removeTransform({"move", 1, campos+ glm::vec3(camori.x * 1,camori.y * 1 ,camori.z * 1) });
 
         for (int i = 0; i < scenes[actuallyScene]->getNumberOfObjects(); i++) {
             scenes[actuallyScene]->getObject(i)->Draw(keyScan);

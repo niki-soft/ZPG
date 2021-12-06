@@ -20,6 +20,11 @@ void Transform::calculateTransform() {
         if (i.text == "scale")
             this->M = glm::scale(this->M, i.vct);
 
+        if (i.text == "move") {
+            this->M = glm::mat4(1.0f);
+            this->M = glm::translate(this->M, i.vct*i.number);
+        }
+
     } // End of for
 }
 

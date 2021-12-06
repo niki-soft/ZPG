@@ -22,9 +22,10 @@ Object::Object(std::vector<float> pnts, Shader* sh) {
 
 void Object::Draw(keyPress *keyScan) {
     this->shader->camera->Inputs(keyScan);
+    this->transform->calculateTransform();
     this->shader->setShader(this->transform->M);
     this->model->setVAO();
-    this->transform->calculateTransform();
+
     // draw triangles
     glDrawArrays(GL_TRIANGLES, 0, this->model->numberOfTriangles()); //mode,first,count
 
