@@ -1,0 +1,3 @@
+file(REMOVE_RECURSE
+  "libSOIL_STATIC.a"
+)
